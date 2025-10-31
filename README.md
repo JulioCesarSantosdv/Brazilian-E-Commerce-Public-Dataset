@@ -68,7 +68,8 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   </tbody>
 </table>
 <p><strong>Dimensões de Análise:</strong> Categoria de Produto, Estado do Cliente, Período (Mês/Ano)</p>
-
+<p> <a href="https://docs.olist.com/comercial-dashboard" target="_blank">Documentação Técnica - Área Comercial</a></p>
+<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Comercial no Looker Studio</a></p>
 <hr>
 
 <h3>Área de Marketing (Gerente de Marketing)</h3>
@@ -91,7 +92,8 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   </tbody>
 </table>
 <p><strong>Dimensões de Análise:</strong> Segmento RFM, Categoria de Produto, Estado do Cliente</p>
-
+<p> <a href="https://docs.olist.com/comercial-dashboard" target="_blank">Documentação Técnica - Área de Marketing </a></p>
+<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Marketing no Looker Studio</a></p>
 <hr>
 
 <h3>Área Operacional (Head de Operações)</h3>
@@ -115,6 +117,8 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
 </table>
 <p><strong>Dimensões de Análise:</strong> Vendedor, Região de Destino, Categoria de Produto</p>
 
+<p><a href="https://docs.olist.com/operacoes-dashboard" target="_blank">Documentação Técnica - Área Operacional</a></p>
+<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank">Dashboard Operacional no Looker Studio</a></p>
 <hr>
 
 <h2>Modelagem de Dados (Schema Star)</h2>
@@ -166,6 +170,7 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   <li>Mapa geográfico: Heatmap de vendas e atrasos</li>
   <li>Alertas: Indicadores críticos (inadimplência, avaliações negativas)</li>
 </ul>
+<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank">Dashboard Executivo no Looker Studio</a></p>
 
 <h3>Visão Comercial</h3>
 <ul>
@@ -174,6 +179,7 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   <li>Evolução temporal: Variação do GMV mês a mês</li>
   <li>Análise de portfólio: Receita por Categoria</li>
 </ul>
+<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Comercial no Looker Studio</a></p>
 
 <h3>Visão Marketing/Clientes</h3>
 <ul>
@@ -182,6 +188,7 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   <li>Análise de aquisição: Categoria de Primeira Compra</li>
   <li>Satisfação: Taxa de Avaliações Negativas e Tempo Médio de Avaliação</li>
 </ul>
+<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Marketing no Looker Studio</a></p>
 
 <h3> Visão Operacional</h3>
 <ul>
@@ -190,3 +197,4 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   <li>Otimização de custos: Custo do Frete por Dimensão do Produto</li>
   <li>Gráfico de dispersão: Frete vs. Peso/Comprimento</li>
 </ul>
+<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank">Dashboard Operacional no Looker Studio</a></p>
