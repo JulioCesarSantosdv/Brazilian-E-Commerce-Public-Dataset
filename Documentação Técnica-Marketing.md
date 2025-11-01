@@ -1,5 +1,5 @@
-<h1>📊 Dashboard de Clientes e Marketing — Olist Marketplace</h1>
-<h2>🧩 Levantamento de Requisitos com o Gerente de Marketing</h2>
+<h1> Dashboard de Clientes e Marketing — Olist Marketplace</h1>
+<h2> Levantamento de Requisitos com o Gerente de Marketing</h2>
 
 <p>Durante a reunião de levantamento de requisitos com o <strong>Gerente de Marketing</strong>, o objetivo principal identificado foi <strong>entender o perfil do cliente, o comportamento de compra e a eficácia das campanhas</strong> para aumentar a <strong>retenção</strong> e o <strong>valor do cliente (LTV)</strong>.</p>
 
@@ -7,7 +7,7 @@
 
 <hr>
 
-<h2>📊 Levantamento de Requisitos: Foco no Gerente de Marketing</h2>
+<h2> Levantamento de Requisitos: Foco no Gerente de Marketing</h2>
 
 <table>
   <thead>
@@ -58,7 +58,7 @@
 
 <hr>
 
-<h2>🗣️ Feedback do Stakeholder — Gerente de Marketing</h2>
+<h2> Feedback do Stakeholder — Gerente de Marketing</h2>
 <blockquote>
   <p>“A lista é excelente e cobre o essencial para a gestão da base de clientes.  
   A inclusão do LTV, da Taxa de Recorrência e, principalmente, da Segmentação RFM mostra que o Analista de Dados entende a nossa necessidade de ir além do faturamento bruto e focar na qualidade e no potencial de longo prazo do cliente.”</p>
@@ -71,7 +71,7 @@
 
 <hr>
 
-<h2>📝 Solicitações de Ajuste</h2>
+<h2> Solicitações de Ajuste</h2>
 <ul>
   <li>Adicionar KPI: <strong>Categoria de Produto mais comprada na Primeira Transação</strong>;</li>
   <li>Ajustar KPI: <strong>Distribuição de Avaliações</strong> → focar em <strong>Taxa de Avaliações Negativas</strong> e <strong>Tempo Médio de Avaliação</strong>.</li>
@@ -79,7 +79,7 @@
 
 <hr>
 
-<h2>📊 Levantamento de Requisitos: Versão Atualizada (Pós-Feedback)</h2>
+<h2> Levantamento de Requisitos: Versão Atualizada (Pós-Feedback)</h2>
 
 <table>
   <thead>
@@ -130,7 +130,7 @@
 
 <hr>
 
-<h2>🔍 Dimensões de Análise (Filtros do Dashboard)</h2>
+<h2> Dimensões de Análise (Filtros do Dashboard)</h2>
 <ol>
   <li><strong>Segmento RFM</strong> (comportamento e valor do cliente);</li>
   <li><strong>Categoria de Produto</strong> (para campanhas de cross-sell e up-sell);</li>
@@ -150,18 +150,13 @@
 
 <hr>
 
-<h2>✅ Resumo da Etapa</h2>
+<h2> Resumo da Etapa</h2>
 <ul>
-  <li><strong>Status da Fase:</strong> ✔️ Concluída (Requisitos Validados)</li>
+  <li><strong>Status da Fase:</strong> Concluída (Requisitos Validados)</li>
   <li><strong>Stakeholder:</strong> Gerente de Marketing</li>
   <li><strong>Área de Negócio:</strong> Marketing</li>
-  <li><strong>Próximo Passo:</strong> Reunião de levantamento de requisitos com o Head de Operações (Dashboard Logístico)</li>
 </ul>
 
 <hr>
 
-<h2>📎 Links Relacionados</h2>
-<ul>
-  <li>🔗 <a href="https://docs.olist.com/marketing-dashboard" target="_blank">Documentação Técnica — Dashboard de Clientes e Marketing</a></li>
-  <li>📊 <a href="https://lookerstudio.google.com/u/0/reporting/marketing-dashboard" target="_blank">Dashboard de Clientes e Marketing no Looker Studio</a></li>
-</ul>
+
