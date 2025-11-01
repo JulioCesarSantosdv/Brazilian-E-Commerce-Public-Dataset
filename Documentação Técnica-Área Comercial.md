@@ -15,7 +15,7 @@
 </ul>
 
 <p><strong>Problema de Negócio:</strong></p>
-<blockquote>💬 “Como aumentar o volume de vendas (GMV) e a rentabilidade do marketplace, identificando padrões de performance entre vendedores, categorias e regiões?”</blockquote>
+<blockquote> “Quais vendedores, categorias e regiões mais contribuem para o aumento do GMV e rentabilidade?”</blockquote>
 
 <hr>
 
@@ -119,6 +119,7 @@
 
 
 <p><a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/README.md#passo-5-hip%C3%B3teses-anal%C3%ADticas" target="_blank" rel="noopener noreferrer">Voltar</a></p>
+
 
 
 
