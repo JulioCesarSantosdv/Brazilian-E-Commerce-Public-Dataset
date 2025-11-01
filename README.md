@@ -29,7 +29,7 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
 
 <h2>Estratégia de Solução</h2>
 
-<h3>Passo 1: Perguntas Abertas</h3>
+<h3>Passo 1: Resumir o contexto em uma pergunta aberta</h3>
 <p>
 As perguntas abertas representam problemas estratégicos amplos e exploratórios, geralmente começando com “Como” ou “Por que”.  
 Foram definidas as seguintes:
@@ -40,7 +40,7 @@ Foram definidas as seguintes:
   <li><strong>Área Operacional:</strong> Como tornar as entregas mais eficientes, reduzindo atrasos e custos?</li>
 </ul>
 
-<h3>Passo 2: Perguntas Fechadas</h3>
+<h3>Passo 2: Transformar uma pergunta aberta em uma pergunta fechada</h3>
 <p>
 As perguntas fechadas direcionam a análise para o que precisa ser mensurado e respondido com dados.  
 Geralmente começam com “Quais”, “Quanto” ou “Quem”.
@@ -53,7 +53,7 @@ Geralmente começam com “Quais”, “Quanto” ou “Quem”.
 
 <h3>Passo 3: Definição do Fato</h3>
 <p>
-O <strong>Fato</strong> é a métrica central da análise — o ponto que conecta a pergunta fechada à forma de mensurar os resultados.
+O <strong>Fato</strong> é a métrica central da análise , é o ponto que conecta a pergunta fechada à forma de mensurar os resultados.
 </p>
 
 <ul>
@@ -142,7 +142,7 @@ Após avaliar os critérios, as hipóteses mais relevantes são priorizadas:
 
 <hr>
 
-<h2>Estrutura dos Dashboards (Looker Studio)</h2>
+<h2>Estrutura dos Dashboards </h2>
 
 <h3>Visão Comercial</h3>
 <ul>
