@@ -1,6 +1,6 @@
 <h1>DASHBOARDS ESTRATÉGICOS PARA O E-COMMERCE OLIST: VISÃO 360° DA PERFORMANCE COMERCIAL, CLIENTES E OPERAÇÕES</h1>
 
-<h2> Visão Geral do Projeto</h2>
+<h2>Visão Geral do Projeto</h2>
 <p>
 Este projeto consiste na construção de uma suíte de dashboards analíticos no Looker Studio para fornecer uma visão 360° da operação do e-commerce Olist. 
 O objetivo é transformar dados brutos em insights estratégicos acionáveis para diferentes stakeholders, simulando um ciclo completo de análise de dados seguindo a metodologia <strong>CRISP-DM</strong>.
@@ -13,145 +13,162 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
 <hr>
 
 <h2>Metodologia e Abordagem</h2>
+
 <h3>CRISP-DM Aplicado</h3>
 <p>O projeto segue as seis fases da metodologia CRISP-DM:</p>
 <ul>
-  <li><strong>Entendimento do Negócio</strong> – Levantamento de requisitos com stakeholders</li>
-  <li><strong>Entendimento dos Dados</strong> – Análise dos datasets da Olist</li>
-  <li><strong>Preparação dos Dados</strong> – Modelagem e transformação</li>
-  <li><strong>Modelagem</strong> – Criação do schema analítico</li>
-  <li><strong>Avaliação</strong> – Validação com stakeholders</li>
-  <li><strong>Implantação</strong> – Dashboards no Looker Studio</li>
+  <li><strong>Entendimento do Negócio</strong> – Levantamento de requisitos com stakeholders;</li>
+  <li><strong>Entendimento dos Dados</strong> – Análise dos datasets da Olist;</li>
+  <li><strong>Preparação dos Dados</strong> – Modelagem e transformação;</li>
+  <li><strong>Modelagem</strong> – Criação do schema analítico;</li>
+  <li><strong>Avaliação</strong> – Validação com stakeholders;</li>
+  <li><strong>Implantação</strong> – Dashboards no Looker Studio.</li>
 </ul>
 
-<h3>Técnicas de Levantamento de Requisitos</h3>
-<p>Utilizamos uma abordagem mista para garantir alinhamento total com as necessidades de negócio:</p>
-
-<p> <strong>Perguntas Abertas:</strong></p>
-<ul>
-  <li>"Qual é seu objetivo principal com este dashboard?"</li>
-  <li>"Quais são suas maiores dores atualmente?"</li>
-</ul>
-
-<p> <strong>Perguntas Fechadas:</strong></p>
-<ul>
-  <li>"O KPI de LTV atende sua necessidade?"</li>
-  <li>"A dimensão por categoria de produto é essencial?"</li>
-</ul>
-
-<h3> Hipóteses de Negócio Validadas:</h3>
-<ul>
-  <li>"Clientes que compram eletrônicos têm maior LTV"</li>
-  <li>"Vendedores com menor tempo de preparação têm maior taxa de entrega no prazo"</li>
-  <li>"Avaliações negativas estão correlacionadas com atrasos na entrega"</li>
-</ul>
-
-<h2>Levantamento de Requisitos por Área</h2>
-
-<h3>Área Comercial (Diretor Comercial)</h3>
-<p><strong>Objetivo:</strong> Maximizar o GMV e a rentabilidade do marketplace</p>
-
-
-<p><strong>Dimensões de Análise:</strong> Categoria de Produto, Estado do Cliente, Período (Mês/Ano)</p>
-<p> <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20T%C3%A9cnica-%C3%81rea%20Comercial.md">Documentação Técnica - Área Comercial</a></p>
 <hr>
 
-<h3>Área de Marketing (Gerente de Marketing)</h3>
-<p><strong>Objetivo:</strong> Entender perfil do cliente e eficácia das campanhas</p>
+<h2>Estratégia de Solução</h2>
 
-<p><strong>Dimensões de Análise:</strong> Segmento RFM, Categoria de Produto, Estado do Cliente</p>
+<h3>Passo 1: Perguntas Abertas</h3>
 <p>
-  <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20T%C3%A9cnica-Marketing.md"
-     target="_blank"
-     rel="noopener noreferrer">
-     Documentação Técnica - Área de Marketing
-  </a>
+As perguntas abertas representam problemas estratégicos amplos e exploratórios, geralmente começando com “Como” ou “Por que”.  
+Foram definidas as seguintes:
 </p>
+<ul>
+  <li><strong>Área Comercial:</strong> Como aumentar o volume de vendas e a rentabilidade do marketplace?</li>
+  <li><strong>Área de Marketing:</strong> Como ampliar a retenção e o LTV (valor vitalício) do cliente?</li>
+  <li><strong>Área Operacional:</strong> Como tornar as entregas mais eficientes, reduzindo atrasos e custos?</li>
+</ul>
+
+<h3>Passo 2: Perguntas Fechadas</h3>
+<p>
+As perguntas fechadas direcionam a análise para o que precisa ser mensurado e respondido com dados.  
+Geralmente começam com “Quais”, “Quanto” ou “Quem”.
+</p>
+<ul>
+  <li><strong>Área Comercial:</strong> Quais vendedores, categorias e regiões mais contribuem para o aumento do GMV e rentabilidade?</li>
+  <li><strong>Área de Marketing:</strong> Quais características e comportamentos distinguem os clientes com maior LTV e probabilidade de recompra?</li>
+  <li><strong>Área Operacional:</strong> Quais fatores mais influenciam o tempo médio de entrega e a taxa de atraso?</li>
+</ul>
+
+<h3>Passo 3: Definição do Fato</h3>
+<p>
+O <strong>Fato</strong> é a métrica central da análise — o ponto que conecta a pergunta fechada à forma de mensurar os resultados.
+</p>
+
+<ul>
+  <li><strong>Área Comercial:</strong> GMV (Gross Merchandise Volume) — representa o faturamento bruto do marketplace.</li>
+  <li><strong>Área de Marketing:</strong> LTV (Lifetime Value) — mede o valor total gerado por cliente ao longo do tempo.</li>
+  <li><strong>Área Operacional:</strong> TME (Tempo Médio de Entrega) — mede o tempo, em dias, entre a aprovação e a entrega do pedido.</li>
+</ul>
+
 <hr>
 
-<h3>Área Operacional (Head de Operações)</h3>
-<p><strong>Objetivo:</strong> Garantir eficiência logística e qualidade da entrega</p>
+<h3>Passo 4: Identificação das Dimensões</h3>
+<p>
+As <strong>Dimensões</strong> explicam o Fato e permitem segmentar e detalhar os resultados.
+</p>
 
-<p><strong>Dimensões de Análise:</strong> Vendedor, Região de Destino, Categoria de Produto</p>
-
-<p><a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20Head-de-Opera%C3%A7%C3%B5es.md"_blank">Documentação Técnica - Área Operacional</a></p>
+<ul>
+  <li><strong>Comercial:</strong> Vendedor, Categoria de Produto, Região, Tempo, Canal de Venda.</li>
+  <li><strong>Marketing:</strong> Segmento RFM, Categoria de Primeira Compra, Estado, Faixa Etária, Avaliação, Recência.</li>
+  <li><strong>Operacional:</strong> Vendedor, Região de Destino, Categoria de Produto, Peso/Dimensões, Transportadora, Data da Compra.</li>
+</ul>
 
 <hr>
 
-<h2>Modelagem de Dados (Schema Star)</h2>
-<h3>Estrutura do Data Mart</h3>
+<h3>Passo 5: Hipóteses Analíticas</h3>
+<p>
+As <strong>Hipóteses Analíticas</strong> combinam Fato + Dimensão + Comparação.  
+São investigações quantitativas que direcionam a exploração dos dados e a geração de insights.
+</p>
 
-<h4>Tabelas Fato</h4>
-<table>
-  <thead>
-    <tr>
-      <th>Tabela Fato</th>
-      <th>Foco</th>
-      <th>Métricas Principais</th>
-      <th>Dimensões Relacionadas</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>FATO_COMERCIAL</td><td>Transações de venda</td><td>GMV, Ticket Médio, Receita</td><td>TEMPO, PRODUTO, VENDEDOR, CLIENTE</td></tr>
-    <tr><td>FATO_CLIENTES</td><td>Comportamento do cliente</td><td>LTV, Recorrência, Score RFM</td><td>CLIENTE, TEMPO, PRODUTO</td></tr>
-    <tr><td>FATO_OPERACIONAL</td><td>Logística e entrega</td><td>TME, Taxa de Entrega, Custo Frete</td><td>TEMPO, VENDEDOR, GEOGRAFIA</td></tr>
-  </tbody>
-</table>
+<h4>Área Comercial</h4>
+<ul>
+  <li>O GMV dos vendedores do Sudeste é maior que o das outras regiões.</li>
+  <li>Categorias de alto valor agregado geram maior GMV por pedido.</li>
+  <li>Vendedores com menor taxa de cancelamento têm maior rentabilidade.</li>
+  <li>O GMV cresce mês a mês no período analisado.</li>
+</ul>
 
-<h4>Tabelas Dimensão</h4>
-<table>
-  <thead>
-    <tr>
-      <th>Dimensão</th>
-      <th>Descrição</th>
-      <th>Campos Principais</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>DIM_TEMPO</td><td>Datas para análise temporal</td><td>data_key, ano, mês, trimestre, dia_semana</td></tr>
-    <tr><td>DIM_CLIENTE</td><td>Dados demográficos e geográficos</td><td>customer_id, estado, cidade, segmento_rfm</td></tr>
-    <tr><td>DIM_VENDEDOR</td><td>Dados dos vendedores parceiros</td><td>seller_id, cidade, estado</td></tr>
-    <tr><td>DIM_PRODUTO</td><td>Características dos produtos</td><td>product_id, categoria, peso, comprimento</td></tr>
-    <tr><td>DIM_GEOGRAFIA</td><td>Dados geográficos para análise espacial</td><td>geolocation_zip_code, cidade, estado, coordenadas</td></tr>
-  </tbody>
-</table>
+<h4>Área de Marketing</h4>
+<ul>
+  <li>Clientes “Campeões” no modelo RFM possuem LTV maior que outros segmentos.</li>
+  <li>A categoria da primeira compra influencia o LTV médio.</li>
+  <li>Clientes com boas avaliações têm maior taxa de recompra.</li>
+</ul>
+
+<h4>Área Operacional</h4>
+<ul>
+  <li>O TME é maior nas regiões Norte e Nordeste.</li>
+  <li>Produtos mais pesados ou volumosos elevam o TME médio.</li>
+  <li>Transportadoras específicas apresentam melhor desempenho.</li>
+</ul>
+
+<hr>
+
+<h3>Passo 6: Critérios de Priorização</h3>
+<p>As hipóteses são priorizadas com base em quatro critérios principais:</p>
+<ol>
+  <li><strong>Disponibilidade dos Dados:</strong> Existem dados suficientes e confiáveis?</li>
+  <li><strong>Insight Acionável:</strong> O resultado gera uma ação prática?</li>
+  <li><strong>Facilidade de Implementação:</strong> É simples executar a análise?</li>
+  <li><strong>Impacto no Negócio:</strong> O resultado traz impacto financeiro ou estratégico?</li>
+</ol>
+
+<hr>
+
+<h3>Passo 7: Priorização das Hipóteses</h3>
+<p>
+Após avaliar os critérios, as hipóteses mais relevantes são priorizadas:
+</p>
+
+<h4>Comercial</h4>
+<ul>
+  <li><strong>Alta prioridade:</strong> GMV por Região e por Categoria — impacto direto nas vendas.</li>
+</ul>
+
+<h4>Marketing</h4>
+<ul>
+  <li><strong>Alta prioridade:</strong> LTV por Segmento RFM e Categoria de Primeira Compra — fundamentais para retenção.</li>
+</ul>
+
+<h4>Operacional</h4>
+<ul>
+  <li><strong>Alta prioridade:</strong> TME por Região e Peso/Dimensão — essenciais para otimização logística.</li>
+</ul>
+
+<p><em>Essas hipóteses guiam as análises e sustentam as decisões estratégicas de cada área.</em></p>
 
 <hr>
 
 <h2>Estrutura dos Dashboards (Looker Studio)</h2>
 
-<h3>Visão Executiva (C-Level)</h3>
-<ul>
-  <li>KPIs agregados das 3 áreas</li>
-  <li>Gráfico de tendência: Receita vs. Entrega no Prazo</li>
-  <li>Mapa geográfico: Heatmap de vendas e atrasos</li>
-  <li>Alertas: Indicadores críticos (inadimplência, avaliações negativas)</li>
-</ul>
-<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank">Dashboard Executivo no Looker Studio</a></p>
-
 <h3>Visão Comercial</h3>
 <ul>
-  <li>Cards de performance: GMV, Ticket Médio, Volume de Pedidos</li>
-  <li>Rankings: Top 5 Vendedores e Categorias</li>
-  <li>Evolução temporal: Variação do GMV mês a mês</li>
-  <li>Análise de portfólio: Receita por Categoria</li>
+  <li>Cards: GMV, Ticket Médio, Volume de Pedidos</li>
+  <li>Top 5 Vendedores e Categorias</li>
+  <li>Evolução temporal: GMV mês a mês</li>
+  <li>Receita por Categoria</li>
 </ul>
-<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Comercial no Looker Studio</a></p>
+<p><a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Comercial no Looker Studio</a></p>
 
 <h3>Visão Marketing/Clientes</h3>
 <ul>
-  <li>Indicadores de retenção: LTV, Taxa de Recorrência</li>
-  <li>Segmentação RFM: Distribuição de clientes (Campeões, Em Risco, etc.)</li>
-  <li>Análise de aquisição: Categoria de Primeira Compra</li>
-  <li>Satisfação: Taxa de Avaliações Negativas e Tempo Médio de Avaliação</li>
+  <li>Indicadores: LTV, Taxa de Recorrência</li>
+  <li>Segmentação RFM</li>
+  <li>Categoria de Primeira Compra</li>
+  <li>Taxa de Avaliações Negativas</li>
 </ul>
-<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Marketing no Looker Studio</a></p>
+<p><a href="https://lookerstudio.google.com/u/0/reporting/marketing-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Marketing no Looker Studio</a></p>
 
-<h3> Visão Operacional</h3>
+<h3>Visão Operacional</h3>
 <ul>
-  <li>Indicadores logísticos: TME, Taxa de Entrega no Prazo, SLA Vendedores</li>
-  <li>Análise de risco: Top 5 Cidades e Vendedores com maior taxa de atraso</li>
-  <li>Otimização de custos: Custo do Frete por Dimensão do Produto</li>
-  <li>Gráfico de dispersão: Frete vs. Peso/Comprimento</li>
+  <li>Indicadores: TME, SLA Vendedores, Taxa de Entrega no Prazo</li>
+  <li>Top 5 Cidades e Vendedores com Atraso</li>
+  <li>Custo do Frete por Dimensão do Produto</li>
+  <li>Frete vs. Peso/Comprimento</li>
 </ul>
-<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank">Dashboard Operacional no Looker Studio</a></p>
+<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Operacional no Looker Studio</a></p>
+
+
