@@ -15,7 +15,7 @@
 </ul>
 
 <p><strong>Problema de Negócio:</strong></p>
-<blockquote> “Como aumentar a retenção e o valor vitalício do cliente (LTV), compreendendo seu comportamento de compra e as causas de insatisfação para orientar campanhas mais eficazes?”</blockquote>
+<blockquote> “Quais características e comportamentos distinguem os clientes com maior LTV e probabilidade de recompra?”</blockquote>
 
 <hr>
 
@@ -113,4 +113,5 @@
 <hr>
 
 <p><a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/README.md#passo-5-hip%C3%B3teses-anal%C3%ADticas" target="_blank" rel="noopener noreferrer">Voltar</a></p>
+
 
