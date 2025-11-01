@@ -12,8 +12,8 @@
   - [Passo 5: Hipóteses Analíticas](#passo-5-hipóteses-analíticas)
   - [Passo 6: Critérios de Priorização](#passo-6-critérios-de-priorização)
   - [Passo 7: Priorização das Hipóteses](#passo-7-priorização-das-hipóteses)
-- [Estrutura dos Dashboards](#estrutura-dos-dashboards)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura dos Dashboards](#estrutura-dos-dashboards-)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas-)
 <hr>
 
 <h2>Visão Geral do Projeto</h2>
