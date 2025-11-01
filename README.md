@@ -90,6 +90,7 @@ São investigações quantitativas que direcionam a exploração dos dados e a g
   <li>Vendedores com menor taxa de cancelamento têm maior rentabilidade.</li>
   <li>O GMV cresce mês a mês no período analisado.</li>
 </ul>
+<p><a href="Documentação Técnica-Área Comercial.md" target="_blank" rel="noopener noreferrer">Documentação Técnica - Área Comercial</a></p>
 
 <h4>Área de Marketing</h4>
 <ul>
@@ -97,6 +98,7 @@ São investigações quantitativas que direcionam a exploração dos dados e a g
   <li>A categoria da primeira compra influencia o LTV médio.</li>
   <li>Clientes com boas avaliações têm maior taxa de recompra.</li>
 </ul>
+<p><a href="Documentação Técnica-Marketing.md" target="_blank" rel="noopener noreferrer">Documentação Técnica - Área de Marketing</a></p>
 
 <h4>Área Operacional</h4>
 <ul>
@@ -104,6 +106,7 @@ São investigações quantitativas que direcionam a exploração dos dados e a g
   <li>Produtos mais pesados ou volumosos elevam o TME médio.</li>
   <li>Transportadoras específicas apresentam melhor desempenho.</li>
 </ul>
+<p><a href="Documentação Head-de-Operações.md" target="_blank" rel="noopener noreferrer">Documentação Técnica - Área Operacional</a></p>
 
 <hr>
 
