@@ -67,18 +67,20 @@ atendendo às necessidades do <strong>Diretor Comercial</strong>, <strong>Gerent
 <h3 id="passo-3-definição-do-fato">Passo 3: Definição do Fato</h3>
 <ul>
   <li><strong>Comercial:</strong> GMV (Gross Merchandise Volume) — faturamento bruto do marketplace.</li>
-  <p><a href="Documentação Técnica-Área Comercial.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área Comercial</a></p>
-  <li><strong>Marketing:</strong> LTV (Lifetime Value) — valor total gerado por cliente ao longo do tempo.</li>
-  <p><a href="Documentação Técnica-Marketing.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área de Marketing</a></p>
-  <li><strong>Operacional:</strong> TME (Tempo Médio de Entrega) — tempo médio entre aprovação e entrega do pedido.</li>
-  <p><a href="Documentação Head-de-Operações.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área Operacional</a></p
+  <a href="Documentação Técnica-Área Comercial.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área Comercial</a>
+  <li><strong>Marketing:</strong> LTV (Lifetime Value) — valor total gerado por cliente ao longo do tempo.</li> 
+  <a href="Documentação Técnica-Marketing.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área de Marketing</a>
+  <li><strong>Operacional:</strong> TME (Tempo Médio de Entrega) — tempo médio entre aprovação e entrega do pedido.</li> 
+  <a href="Documentação Head-de-Operações.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área Operacional</a>
 </ul>
+
+<hr>
 
 <h3 id="passo-4-identificação-das-dimensões">Passo 4: Identificação das Dimensões</h3>
 <ul>
-  <li><strong>Comercial:</strong> Vendedor, Categoria de Produto, Região, Tempo, Canal de Venda.</li>
-  <li><strong>Marketing:</strong> Segmento RFM, Categoria de Primeira Compra, Estado, Faixa Etária, Avaliação, Recência.</li>
-  <li><strong>Operacional:</strong> Vendedor, Região de Destino, Categoria, Peso, Transportadora, Data da Compra.</li>
+<li><strong>Comercial:</strong> Vendedor, Categoria de Produto, Região, Tempo, Canal de Venda.</li>
+<li><strong>Marketing:</strong> Segmento RFM, Categoria de Primeira Compra, Estado, Faixa Etária, Avaliação, Recência.</li>
+<li><strong>Operacional:</strong> Vendedor, Região de Destino, Categoria, Peso, Transportadora, Data da Compra.</li>
 </ul>
 
 <h3 id="passo-5-hipóteses-analíticas">Passo 5: Hipóteses Analíticas</h3>
