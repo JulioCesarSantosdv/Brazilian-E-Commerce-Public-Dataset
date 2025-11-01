@@ -14,6 +14,7 @@
   - [Passo 7: Priorização das Hipóteses](#passo-7-priorização-das-hipóteses)
 - [Estrutura dos Dashboards](#estrutura-dos-dashboards-)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas-)
+- [Lições Aprendidas](#lições-aprendidas-)
 <hr>
 
 <h2>Visão Geral do Projeto</h2>
