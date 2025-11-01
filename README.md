@@ -200,3 +200,21 @@ Após avaliar os critérios, as hipóteses mais relevantes são priorizadas:
   <li>Metodologia CRISP-DM</li>
 </ul>
 
+<hr>
+<h2>Lições Aprendidas </h2>
+<ul>
+  <li>A importância de começar a análise pelo entendimento de negócio, não pelos dados.</li>
+  <li>Como a estrutura Fato-Dimensão facilita a escalabilidade e manutenção do modelo.</li>
+  <li>A necessidade de testar hipóteses simples primeiro, antes de partir para análises complexas.</li>
+  <li>O valor da validação com stakeholders para garantir que o dashboard gere ação real.</li>
+  <li>Praticar o equilíbrio entre clareza visual e profundidade analítica nos painéis do Looker Studio.</li> 
+</ul>
+
+
+
+
+
+
+
+
+
