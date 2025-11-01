@@ -192,10 +192,11 @@ Após avaliar os critérios, as hipóteses mais relevantes são priorizadas:
 
 <hr>
 
-### Tecnologias Utilizadas
-- BigQuery / SQL
-- Looker Studio
-- Google Sheets 
-- Metodologia CRISP-DM
-
+<h2>Tecnologias Utilizadas </h2>
+<ul>
+  <li>BigQuery / SQL</li>
+  <li>Looker Studio</li>
+  <li>Google Sheets</li>
+  <li>Metodologia CRISP-DM</li>
+</ul>
 
