@@ -68,8 +68,7 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   </tbody>
 </table>
 <p><strong>Dimensões de Análise:</strong> Categoria de Produto, Estado do Cliente, Período (Mês/Ano)</p>
-<p> <a href="https://docs.olist.com/comercial-dashboard" target="_blank">Documentação Técnica - Área Comercial</a></p>
-<p> <a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank">Dashboard Comercial no Looker Studio</a></p>
+<p> <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20T%C3%A9cnica-%C3%81rea%20Comercial.md">Documentação Técnica - Área Comercial</a></p>
 <hr>
 
 <h3>Área de Marketing (Gerente de Marketing)</h3>
@@ -122,8 +121,8 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
 </table>
 <p><strong>Dimensões de Análise:</strong> Vendedor, Região de Destino, Categoria de Produto</p>
 
-<p><a href="https://docs.olist.com/operacoes-dashboard" target="_blank">Documentação Técnica - Área Operacional</a></p>
-<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank">Dashboard Operacional no Looker Studio</a></p>
+<p><a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20Head-de-Opera%C3%A7%C3%B5es.md"_blank">Documentação Técnica - Área Operacional</a></p>
+
 <hr>
 
 <h2>Modelagem de Dados (Schema Star)</h2>
