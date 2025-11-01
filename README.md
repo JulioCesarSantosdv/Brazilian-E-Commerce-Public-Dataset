@@ -1,4 +1,20 @@
 <h1>DASHBOARDS ESTRATÉGICOS PARA O E-COMMERCE OLIST: VISÃO 360° DA PERFORMANCE COMERCIAL, CLIENTES E OPERAÇÕES</h1>
+<hr>
+
+## Sumário
+- [Visão Geral do Projeto](#visão-geral-do-projeto)
+- [Metodologia e Abordagem](#metodologia-e-abordagem)
+- [Estratégia de Solução](#estratégia-de-solução)
+  - [Passo 1: Pergunta Aberta](#passo-1-resumir-o-contexto-em-uma-pergunta-aberta)
+  - [Passo 2: Pergunta Fechada](#passo-2-transformar-uma-pergunta-aberta-em-uma-pergunta-fechada)
+  - [Passo 3: Definição do Fato](#passo-3-definição-do-fato)
+  - [Passo 4: Identificação das Dimensões](#passo-4-identificação-das-dimensões)
+  - [Passo 5: Hipóteses Analíticas](#passo-5-hipóteses-analíticas)
+  - [Passo 6: Critérios de Priorização](#passo-6-critérios-de-priorização)
+  - [Passo 7: Priorização das Hipóteses](#passo-7-priorização-das-hipóteses)
+- [Estrutura dos Dashboards](#estrutura-dos-dashboards)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+<hr>
 
 <h2>Visão Geral do Projeto</h2>
 <p>
@@ -173,5 +189,13 @@ Após avaliar os critérios, as hipóteses mais relevantes são priorizadas:
   <li>Frete vs. Peso/Comprimento</li>
 </ul>
 <p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Operacional no Looker Studio</a></p>
+
+<hr>
+
+### Tecnologias Utilizadas
+- BigQuery / SQL
+- Looker Studio
+- Google Sheets 
+- Metodologia CRISP-DM
 
 
