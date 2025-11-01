@@ -15,7 +15,7 @@ O Head de Operações destacou que a área busca aumentar a **eficiência da cad
 - Otimizar **custos logísticos e de frete** com base nas dimensões dos produtos.
 
 **Problema de Negócio:**
-> 💬 “Como melhorar a performance operacional da entrega, reduzindo atrasos e custos, sem comprometer a experiência do cliente?”
+> “Quais fatores mais influenciam o tempo médio de entrega e a taxa de atraso?”
 
 ---
 
@@ -69,6 +69,7 @@ Essas dimensões permitem cruzar performance de entrega por região, vendedor e 
 
 
 <p><a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/README.md#passo-5-hip%C3%B3teses-anal%C3%ADticas" target="_blank" rel="noopener noreferrer">Voltar</a></p>
+
 
 
 
