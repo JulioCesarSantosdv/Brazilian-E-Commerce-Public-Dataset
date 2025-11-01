@@ -1,12 +1,12 @@
-# ⚙️ Dashboard Operacional — Olist Marketplace
+#  Dashboard Operacional — Olist Marketplace
 
-## 🧩 Levantamento de Requisitos com o Head de Operações
+##  Levantamento de Requisitos com o Head de Operações
 
 Durante a reunião de levantamento de requisitos com o **Head de Operações**, o objetivo principal identificado foi **garantir a eficiência logística, a qualidade da entrega e a performance dos vendedores**, reduzindo custos e otimizando a experiência do cliente.
 
 ---
 
-## 🎯 Contexto e Demanda de Negócio
+##  Contexto e Demanda de Negócio
 O Head de Operações destacou que a área busca aumentar a **eficiência da cadeia logística** e reduzir atrasos de entrega. O foco está em:
 
 - Acompanhar **prazos e tempos médios de entrega**;  
@@ -19,7 +19,7 @@ O Head de Operações destacou que a área busca aumentar a **eficiência da cad
 
 ---
 
-## 🧠 Objetivo do Projeto (Visão Operacional)
+##  Objetivo do Projeto (Visão Operacional)
 Desenvolver um **Dashboard Operacional no Looker Studio** que permita:
 
 - Monitorar eficiência e pontualidade das entregas;  
@@ -29,7 +29,7 @@ Desenvolver um **Dashboard Operacional no Looker Studio** que permita:
 
 ---
 
-## 📈 KPIs e Métricas Definidas (Aprovadas)
+##  KPIs e Métricas Definidas (Aprovadas)
 
 | KPI / Métrica | Definição de Negócio | Fórmula de Cálculo (Base Olist) |
 |----------------|----------------------|--------------------------------|
@@ -43,7 +43,7 @@ Desenvolver um **Dashboard Operacional no Looker Studio** que permita:
 
 ---
 
-## 🔍 Dimensões de Análise (Filtros do Dashboard)
+##  Dimensões de Análise (Filtros do Dashboard)
 Os indicadores poderão ser filtrados pelas seguintes dimensões:
 
 1. **Vendedor:** `sellers.seller_id`  
@@ -54,20 +54,18 @@ Essas dimensões permitem cruzar performance de entrega por região, vendedor e 
 
 ---
 
-## 🗣️ Feedback do Stakeholder — Head de Operações
+##  Feedback do Stakeholder — Head de Operações
 > “A lista está excelente. A inclusão da análise por Cidade com Maior Taxa de Atraso e a correlação entre Frete e Dimensões do Produto nos dará a inteligência necessária para otimizar custos e melhorar a experiência de entrega.  
 > As dimensões de análise propostas são ideais para a gestão diária.”
 
 ---
 
-## ✅ Resumo da Etapa
-- **Status da Fase:** ✔️ Concluída (Requisitos Validados)  
+##  Resumo da Etapa
+- **Status da Fase:**  Concluída (Requisitos Validados)  
 - **Stakeholder:** Head de Operações  
 - **Área de Negócio:** Operacional  
-- **Próximo Passo:** Iniciar modelagem de dados no BigQuery e construção do Dashboard Operacional no Looker Studio.
 
 ---
 
-## 📎 Links Relacionados
-- 📚 [Documentação Técnica — Dashboard Operacional](https://github.com/seu-repositorio/docs/operacoes.md)  
-- 📊 [Dashboard Operacional no Looker Studio](https://lookerstudio.google.com/reporting/seu-dashboard-operacoes)
+
+
