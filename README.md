@@ -92,7 +92,13 @@ atendendo às necessidades do Diretor Comercial, Gerente de Marketing e Head de 
   </tbody>
 </table>
 <p><strong>Dimensões de Análise:</strong> Segmento RFM, Categoria de Produto, Estado do Cliente</p>
-<p> <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20T%C3%A9cnica-Marketing.md" target="_blank">Documentação Técnica - Área de Marketing </a></p>
+<p>
+  <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/Documenta%C3%A7%C3%A3o%20T%C3%A9cnica-Marketing.md"
+     target="_blank"
+     rel="noopener noreferrer">
+     Documentação Técnica - Área de Marketing
+  </a>
+</p>
 <hr>
 
 <h3>Área Operacional (Head de Operações)</h3>
