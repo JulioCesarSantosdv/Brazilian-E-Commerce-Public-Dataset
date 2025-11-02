@@ -23,15 +23,29 @@
 
 <hr>
 
-<h2 id="visão-geral-do-projeto">Visão Geral do Projeto</h2>
+<h2>Visão Geral do Projeto</h2>
+
 <p>
-Este projeto consiste na construção de uma suíte de dashboards analíticos no <strong>Looker Studio</strong> para fornecer uma visão 360° da operação do e-commerce <strong>Olist</strong>. 
-O objetivo é transformar dados brutos em insights estratégicos acionáveis, simulando um ciclo completo de análise de dados seguindo a metodologia <strong>CRISP-DM</strong>.
+Este projeto simula um <strong>cenário realista da rotina de um analista de dados</strong> em uma empresa de e-commerce. 
+O objetivo é representar todas as etapas do processo analítico — desde o <strong>levantamento de requisitos com stakeholders</strong>, 
+passando pela <strong>modelagem e exploração dos dados (SQL)</strong>, até a <strong>construção de dashboards estratégicos no Looker Studio</strong>.
 </p>
+
 <p>
-A solução abrange três pilares estratégicos: <strong>Performance Comercial</strong>, <strong>Comportamento do Cliente</strong> e <strong>Eficiência Operacional</strong>, 
-atendendo às necessidades do <strong>Diretor Comercial</strong>, <strong>Gerente de Marketing</strong> e <strong>Head de Operações</strong>.
+A iniciativa visa transformar dados brutos da Olist em <strong>insights acionáveis</strong> que apoiem decisões de negócio em três pilares principais:
 </p>
+
+<ul>
+  <li><strong>Performance Comercial:</strong> monitoramento do volume de vendas e rentabilidade.</li>
+  <li><strong>Comportamento do Cliente:</strong> análise de retenção, LTV e padrões de recompra.</li>
+  <li><strong>Eficiência Operacional:</strong> avaliação de prazos, custos e qualidade das entregas.</li>
+</ul>
+
+<p>
+O projeto adota a metodologia <strong>CRISP-DM</strong> como base estruturante, garantindo uma abordagem analítica clara, iterativa e orientada a resultados — 
+conectando a análise técnica com o valor estratégico para o negócio.
+</p>
+
 
 <hr>
 
