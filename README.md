@@ -196,24 +196,39 @@ Após aplicar os critérios anteriores, são priorizadas as hipóteses com maior
 <hr>
 
 <h2 id="modelagem-de-dados-schema-estrela">Modelagem de Dados (Schema Estrela)</h2>
-<p><strong>Objetivo:</strong> Estruturar os dados em um modelo analítico (Data Mart) que suporte decisões estratégicas de cada área.</p>
+<p>
+<strong>Objetivo:</strong> Estruturar os dados em um modelo analítico (Data Mart) que suporte decisões estratégicas de cada área, utilizando uma única Tabela Fato central, a **FATO_PEDIDO**, na granularidade de **Item de Pedido**. Essa abordagem simula um cenário real de e-commerce, otimizando a consulta e reduzindo a redundância de dados.
+</p>
 
 <table>
   <thead>
     <tr>
       <th>Tabela Fato</th>
-      <th>Métrica Principal</th>
-      <th>Métricas Complementares</th>
+      <th>Granularidade</th>
+      <th>Métricas (Fatos)</th>
       <th>Dimensões Relacionadas</th>
       <th>Objetivo Analítico</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>FATO_COMERCIAL</td><td>GMV</td><td>Ticket Médio, Volume de Pedidos, Receita</td><td>TEMPO, PRODUTO, VENDEDOR, CLIENTE</td><td>Mensurar performance e rentabilidade do marketplace.</td></tr>
-    <tr><td>FATO_CLIENTE</td><td>LTV</td><td>Recorrência, Frequência de Compra, Score RFM</td><td>CLIENTE, TEMPO, PRODUTO</td><td>Medir valor e fidelização de clientes.</td></tr>
-    <tr><td>FATO_OPERACIONAL</td><td>TME</td><td>Taxa de Entrega no Prazo, Custo Frete</td><td>TEMPO, VENDEDOR, GEOGRAFIA</td><td>Monitorar eficiência logística e atrasos.</td></tr>
+    <tr>
+      <td><strong>FATO_PEDIDO</strong></td>
+      <td>Item de Pedido (<code>order_item_id</code>)</td>
+      <td>GMV (<code>price</code> + <code>freight_value</code>), Datas de Entrega (para TME), Valor do Pagamento (<code>payment_value</code>)</td>
+      <td>DIM_TEMPO, DIM_PRODUTO, DIM_VENDEDOR, DIM_CLIENTE, DIM_GEOGRAFIA</td>
+      <td>Mensurar performance comercial, eficiência operacional e fornecer a base para o cálculo do LTV (Marketing).</td>
+    </tr>
   </tbody>
 </table>
+
+<p>
+A partir da **FATO_PEDIDO**, as análises para as três áreas são realizadas:
+</p>
+<ul>
+  <li><strong>Comercial:</strong> Consulta direta ao GMV e agregações por Vendedor e Produto.</li>
+  <li><strong>Operacional:</strong> Consulta direta às datas de *timestamp* para cálculo do TME e análise de frete.</li>
+  <li><strong>Marketing/Cliente:</strong> O LTV é calculado por agregação do GMV ao longo do tempo, utilizando a chave única do cliente (<code>customer_unique_id</code>) presente na FATO_PEDIDO e detalhada na DIM_CLIENTE.</li>
+</ul>
 
 <hr>
 
@@ -265,5 +280,3 @@ Após aplicar os critérios anteriores, são priorizadas as hipóteses com maior
   <li>Validar continuamente com stakeholders.</li>
   <li>Equilibrar clareza visual e profundidade analítica nos dashboards.</li>
 </ul>
-
-
