@@ -29,49 +29,52 @@
 Este projeto simula um <strong>cenário realista da rotina de um analista de dados</strong> em uma empresa de e-commerce. 
 O objetivo é representar todas as etapas do processo analítico — desde o <strong>levantamento de requisitos com stakeholders</strong>, 
 passando pela <strong>modelagem e exploração dos dados (SQL)</strong>, até a <strong>construção de dashboards estratégicos no Looker Studio</strong>.
+
+<strong>Dataset utilizado: </strong><a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" rel="noopener noreferrer">Brazilian E-Commerce Public Dataset by Olist</a>
 </p>
-
-<p>
-A iniciativa visa transformar dados brutos da Olist em <strong>insights acionáveis</strong> que apoiem decisões de negócio em três pilares principais:
-</p>
-
-<ul>
-  <li><strong>Performance Comercial:</strong> monitoramento do volume de vendas e rentabilidade.</li>
-  <li><strong>Comportamento do Cliente:</strong> análise de retenção, LTV e padrões de recompra.</li>
-  <li><strong>Eficiência Operacional:</strong> avaliação de prazos, custos e qualidade das entregas.</li>
-</ul>
-
-<p>
-O projeto adota a metodologia <strong>CRISP-DM</strong> como base estruturante, garantindo uma abordagem analítica clara, iterativa e orientada a resultados — 
-conectando a análise técnica com o valor estratégico para o negócio.
-</p>
-
 
 <hr>
 
 <h2 id="metodologia-e-abordagem">Metodologia e Abordagem</h2>
-<h3>CRISP-DM Aplicado</h3>
+
+<p>
+Para este projeto foi adotada a metodologia <strong>CRISP-DM (Cross Industry Standard Process for Data Mining)</strong>, 
+estruturada para conduzir projetos de análise de dados. 
+Ela divide o processo analítico em <strong>seis fases cíclicas</strong>, permitindo ir da compreensão do negócio até a entrega de valor.
+</p>
+
+<p><strong>Etapas principais:</strong></p>
 <ul>
-  <li><strong>Entendimento do Negócio</strong> – Levantamento de requisitos com stakeholders</li>
-  <li><strong>Entendimento dos Dados</strong> – Análise dos datasets da Olist</li>
-  <li><strong>Preparação dos Dados</strong> – Modelagem e transformação</li>
-  <li><strong>Modelagem</strong> – Criação do schema analítico</li>
-  <li><strong>Avaliação</strong> – Validação com stakeholders</li>
-  <li><strong>Implantação</strong> – Dashboards no Looker Studio</li>
+  <li><strong>Entendimento do Negócio</strong> — definir objetivos e requisitos estratégicos.</li>
+  <li><strong>Entendimento dos Dados</strong> — coletar, explorar e avaliar a qualidade dos dados.</li>
+  <li><strong>Preparação dos Dados</strong> — limpar, transformar e integrar as fontes.</li>
+  <li><strong>Modelagem</strong> — criar e testar estruturas analíticas ou preditivas.</li>
+  <li><strong>Avaliação</strong> — validar resultados com base nos objetivos de negócio.</li>
+  <li><strong>Implantação</strong> — disponibilizar os resultados (dashboards, relatórios ou modelos).</li>
 </ul>
+
+<p><em>Em suma:</em> o CRISP-DM garante que a análise de dados seja <strong>guiada pelo negócio</strong>, 
+<strong>tecnicamente sólida</strong> e <strong>voltada à tomada de decisão</strong>.</p>
+
 
 <hr>
 
 <h2 id="estratégia-de-solução">Estratégia de Solução</h2>
 
-<h3 id="passo-1-resumir-o-contexto-em-uma-pergunta-aberta">Passo 1: Pergunta Aberta</h3>
+<h3 id="passo-1-resumir-o-contexto-em-uma-pergunta-aberta">Passo 1: Resumir o contexto em uma Pergunta Aberta</h3>
+<p>
+As perguntas abertas definem o problema estratégico de forma ampla, guiando o direcionamento da análise.
+</p>
 <ul>
   <li><strong>Área Comercial:</strong> Como aumentar o volume de vendas e a rentabilidade do marketplace?</li>
   <li><strong>Área de Marketing:</strong> Como ampliar a retenção e o LTV (valor vitalício) do cliente?</li>
   <li><strong>Área Operacional:</strong> Como tornar as entregas mais eficientes, reduzindo atrasos e custos?</li>
 </ul>
 
-<h3 id="passo-2-transformar-uma-pergunta-aberta-em-uma-pergunta-fechada">Passo 2: Pergunta Fechada</h3>
+<h3 id="passo-2-transformar-uma-pergunta-aberta-em-uma-pergunta-fechada">Passo 2: Transformar uma pergunta aberta em um pergunta fechada</h3>
+<p>
+As perguntas fechadas transformam o problema estratégico em algo mensurável e objetivo, eis aqui o ponto de partida da análise quantitativa.
+</p>
 <ul>
   <li><strong>Comercial:</strong> Quais vendedores, categorias e regiões mais contribuem para o aumento do GMV e rentabilidade?</li>
   <li><strong>Marketing:</strong> Quais características e comportamentos distinguem os clientes com maior LTV e probabilidade de recompra?</li>
@@ -79,23 +82,61 @@ conectando a análise técnica com o valor estratégico para o negócio.
 </ul>
 
 <h3 id="passo-3-definição-do-fato">Passo 3: Definição do Fato</h3>
+<p>
+O <strong>Fato</strong> é a métrica principal que traduz o objetivo de negócio em um indicador quantificável.  
+Cada área de análise possui um Fato diferente, conforme sua natureza e foco estratégico:
+</p>
 <ul>
-  <li><strong>Comercial:</strong> GMV (Gross Merchandise Volume) — faturamento bruto do marketplace.</li>
-  <a href="Documentação Técnica-Área Comercial.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área Comercial</a>
-  <li><strong>Marketing:</strong> LTV (Lifetime Value) — valor total gerado por cliente ao longo do tempo.</li> 
-  <a href="Documentação Técnica-Marketing.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área de Marketing</a>
-  <li><strong>Operacional:</strong> TME (Tempo Médio de Entrega) — tempo médio entre aprovação e entrega do pedido.</li> 
-  <a href="Documentação Head-de-Operações.md" target="_blank" rel="noopener noreferrer">Documentação Técnica Analítica - Área Operacional</a>
-</ul>
+  <li>
+    <strong>Comercial:</strong> <em>GMV (Gross Merchandise Volume)</em> — representa o valor bruto total vendido no marketplace, refletindo o desempenho financeiro das vendas.
+    <br>
+    <a href="Documentação Técnica-Área Comercial.md" target="_blank" rel="noopener noreferrer">Levantamento de Requisitos - Área Comercial</a>
+  </li>
 
+  <li>
+    <strong>Marketing:</strong> <em>LTV (Lifetime Value)</em> — indica o valor total que um cliente gera ao longo de seu relacionamento com a empresa, refletindo retenção e fidelização.
+    <br>
+    <a href="Documentação Técnica-Marketing.md" target="_blank" rel="noopener noreferrer">Levantamento de Requisitos - Área de Marketing</a>
+  </li>
+
+  <li>
+    <strong>Operacional:</strong> <em>TME (Tempo Médio de Entrega)</em> — mede a média de dias entre a aprovação do pedido e sua entrega ao cliente, refletindo a eficiência logística.
+    <br>
+    <a href="Documentação Head-de-Operações.md" target="_blank" rel="noopener noreferrer">Levantamento de Requisitos - Área Operacional</a>
+  </li>
+</ul>
 <hr>
 
 <h3 id="passo-4-identificação-das-dimensões">Passo 4: Identificação das Dimensões</h3>
+<p>
+As <strong>Dimensões</strong> são os atributos que explicam o <em>Fato</em>, permitindo segmentar, detalhar e comparar os resultados.  
+Enquanto o Fato responde <strong>“o que está acontecendo”</strong>, as dimensões ajudam a entender <strong>“por que e com quem isso acontece”</strong>.
+</p>
+
 <ul>
-<li><strong>Comercial:</strong> Vendedor, Categoria de Produto, Região, Tempo, Canal de Venda.</li>
-<li><strong>Marketing:</strong> Segmento RFM, Categoria de Primeira Compra, Estado, Faixa Etária, Avaliação, Recência.</li>
-<li><strong>Operacional:</strong> Vendedor, Região de Destino, Categoria, Peso, Transportadora, Data da Compra.</li>
+  <li>
+    <strong>Comercial:</strong> 
+    Vendedor, Categoria de Produto, Região, Tempo, Canal de Venda.  
+    <br>
+    <em>Essas dimensões permitem analisar o desempenho comercial sob diferentes perspectivas: como produtos mais rentáveis, vendedores de destaque e variações regionais de vendas.</em>
+  </li>
+
+  <li>
+    <strong>Marketing:</strong> 
+    Segmento RFM, Categoria de Primeira Compra, Estado, Faixa Etária, Avaliação, Recência.  
+    <br>
+    <em>Essas dimensões possibilitam identificar perfis de clientes com maior valor de vida (LTV), padrões de recompra e fatores de satisfação ou retenção.</em>
+  </li>
+
+  <li>
+    <strong>Operacional:</strong> 
+    Vendedor, Região de Destino, Categoria de Produto, Peso, Transportadora, Data da Compra.  
+    <br>
+    <em>Essas dimensões ajudam a compreender variações logísticas, prazos de entrega e gargalos operacionais relacionados a produtos ou regiões.</em>
+  </li>
 </ul>
+
+<hr>
 
 <h3 id="passo-5-hipóteses-analíticas">Passo 5: Hipóteses Analíticas</h3>
 <p>As hipóteses analíticas combinam Fato + Dimensão + Comparação e orientam a exploração dos dados.</p>
@@ -125,19 +166,32 @@ conectando a análise técnica com o valor estratégico para o negócio.
 <hr>
 
 <h3 id="passo-6-critérios-de-priorização">Passo 6: Critérios de Priorização</h3>
+<p>
+Nem todas as hipóteses devem ser testadas de imediato.  
+Os <strong>critérios de priorização</strong> ajudam o analista a focar no que tem maior potencial de impacto com o menor esforço possível.
+</p>
+
 <ol>
-  <li><strong>Disponibilidade dos Dados:</strong> Existem dados suficientes e confiáveis?</li>
-  <li><strong>Insight Acionável:</strong> O resultado gera uma ação prática?</li>
-  <li><strong>Facilidade de Implementação:</strong> É simples executar a análise?</li>
-  <li><strong>Impacto no Negócio:</strong> O resultado traz impacto financeiro ou estratégico?</li>
+  <li><strong>Disponibilidade dos Dados:</strong> Existem dados suficientes e confiáveis para validar a hipótese?</li>
+  <li><strong>Insight Acionável:</strong> O resultado pode gerar uma ação prática ou decisão estratégica?</li>
+  <li><strong>Facilidade de Implementação:</strong> A análise é tecnicamente simples de executar?</li>
+  <li><strong>Impacto no Negócio:</strong> O resultado tem potencial de gerar retorno financeiro, operacional ou estratégico?</li>
 </ol>
 
+<hr>
+
 <h3 id="passo-7-priorização-das-hipóteses">Passo 7: Priorização das Hipóteses</h3>
+<p>
+Após aplicar os critérios anteriores, são priorizadas as hipóteses com maior valor analítico e impacto no negócio:
+</p>
+
 <ul>
-  <li><strong>Comercial:</strong> GMV por Região e Categoria (alta prioridade)</li>
-  <li><strong>Marketing:</strong> LTV por Segmento RFM e Categoria de Primeira Compra</li>
-  <li><strong>Operacional:</strong> TME por Região e Peso/Dimensão</li>
+  <li><strong>Comercial:</strong> GMV por Região e Categoria — <em>alta prioridade (impacto direto em vendas e rentabilidade).</em></li>
+  <li><strong>Marketing:</strong> LTV por Segmento RFM e Categoria de Primeira Compra — <em>prioridade alta (apoia estratégias de retenção e fidelização).</em></li>
+  <li><strong>Operacional:</strong> TME por Região e Peso/Dimensão — <em>prioridade alta (otimização logística e redução de custos).</em></li>
 </ul>
+
+<p><em>Essas hipóteses guiam as análises e sustentam as decisões estratégicas de cada área de negócio.</em></p>
 
 <hr>
 
