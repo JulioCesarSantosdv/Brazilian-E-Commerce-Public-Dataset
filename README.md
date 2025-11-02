@@ -88,7 +88,7 @@ Cada área de análise possui um Fato diferente, conforme sua natureza e foco es
 </p>
 <ul>
   <li>
-    <strong>Comercial:</strong> <em>GMV (Gross Merchandise Volume)</em> — representa o valor bruto total vendido no marketplace, refletindo o desempenho financeiro das vendas.
+    <strong>Comercial:</strong> <em>GMV (Gross Merchandise Volume)</em> — representa o valor bruto pago pelo cliente  (incluindo o preço do produto, frete e impostos), refletindo o desempenho financeiro das vendas.
     <br>
     <a href="Documentação Técnica-Área Comercial.md" target="_blank" rel="noopener noreferrer">Levantamento de Requisitos - Área Comercial</a>
   </li>
