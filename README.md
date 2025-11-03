@@ -222,11 +222,11 @@ Após aplicar os critérios anteriores, são priorizadas as hipóteses com maior
 </table>
 
 <p>
-A partir da **FATO_PEDIDO**, as análises para as três áreas são realizadas:
+A partir da <strong>FATO_PEDIDO</strong>, as análises para as três áreas são realizadas:
 </p>
 <ul>
   <li><strong>Comercial:</strong> Consulta direta ao GMV e agregações por Vendedor e Produto.</li>
-  <li><strong>Operacional:</strong> Consulta direta às datas de *timestamp* para cálculo do TME e análise de frete.</li>
+  <li><strong>Operacional:</strong> Consulta direta às datas de <strong>timestamp</strong> para cálculo do TME e análise de frete.</li>
   <li><strong>Marketing/Cliente:</strong> O LTV é calculado por agregação do GMV ao longo do tempo, utilizando a chave única do cliente (<code>customer_unique_id</code>) presente na FATO_PEDIDO e detalhada na DIM_CLIENTE.</li>
 </ul>
 
