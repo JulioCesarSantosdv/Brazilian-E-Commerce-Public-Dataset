@@ -197,7 +197,7 @@ Após aplicar os critérios anteriores, são priorizadas as hipóteses com maior
 
 <h2 id="modelagem-de-dados-schema-estrela">Modelagem de Dados (Schema Estrela)</h2>
 <p>
-<strong>Objetivo:</strong> Estruturar os dados em um modelo analítico (Data Mart) que suporte decisões estratégicas de cada área, utilizando uma única Tabela Fato central, a **FATO_PEDIDO**, na granularidade de **Item de Pedido**. Essa abordagem simula um cenário real de e-commerce, otimizando a consulta e reduzindo a redundância de dados.
+<strong>Objetivo:</strong> Estruturar os dados em um modelo analítico (Data Mart) que suporte decisões estratégicas de cada área, utilizando uma única Tabela Fato central, a <strong>FATO_PEDIDO</strong>, na granularidade de <strong>Item de Pedido</strong>. Essa abordagem simula um cenário real de e-commerce, otimizando a consulta e reduzindo a redundância de dados.
 </p>
 
 <table>
