@@ -1,286 +1,241 @@
-📊 RELATÓRIO EXECUTIVO - INVESTIGAÇÃO OLIST: ANÁLISE DE CHURN E RETENÇÃO
-<div>
-https://img.shields.io/badge/AN%C3%81LISE-DASHBOARDS-blue
-https://img.shields.io/badge/BIGQUERY-SQL-yellow
-https://img.shields.io/badge/INSIGHTS-ACION%C3%81VEIS-green
+<h1>Relatório Executivo — Investigação Olist: Análise de Churn e Retenção</h1>
+
+<h2>Contexto e Objetivo da Investigação</h2>
+<p>O objetivo principal desta análise foi identificar as causas raiz da <strong>baixa retenção de clientes</strong> na Olist e propor soluções baseadas em dados para <strong>aumentar a fidelidade</strong> e o valor de vida (LTV) dos consumidores.</p>
+
+<hr>
+
+<h2>Resumo Executivo</h2>
+<p><strong>Status Atual:</strong> Crítico — Apenas <strong>3,05% dos clientes retornam</strong> para uma segunda compra.</p>
+
+<div style="background: #ff6b6b; color: white; padding: 10px; border-radius: 8px;">
+⚠️ Alerta: A taxa de recompra é extremamente baixa, impactando diretamente o crescimento sustentável.
 </div>
 
-🎯 RESUMO EXECUTIVO  
-📈 STATUS ATUAL CRÍTICO  
-html  
-<div style="background: #ff6b6b; padding: 15px; border-radius: 10px; color: white;">
-⚠️ <strong>ALERTA:</strong> Apenas 3,05% dos clientes retornam para segunda compra
-</div>
+<hr>
 
-🎯 OBJETIVO DA INVESTIGAÇÃO  
-Identificar as causas raiz da baixa retenção e propor soluções baseadas em dados para aumentar a fidelidade de clientes.
+<h2>Metodologia e Estrutura da Análise</h2>
+<p>A investigação foi conduzida em três fases principais, utilizando <strong>consultas SQL no BigQuery</strong> e dashboards de apoio no <strong>Looker Studio</strong>.</p>
 
-📊 METODOLOGIA  
-🔍 ABORDAGEM ANALÍTICA  
-html  
-<table border="1" style="width:100%">
-  <tr style="background: #4CAF50; color: white;">
-    <th>Fase</th>
-    <th>Objetivo</th>
-    <th>Consultas</th>
-  </tr>
-  <tr>
-    <td>📋 Diagnóstico</td>
-    <td>Entender magnitude do problema</td>
-    <td>6 consultas SQL</td>
-  </tr>
-  <tr>
-    <td>🔍 Análise</td>
-    <td>Identificar padrões e correlações</td>
-    <td>9 consultas SQL</td>
-  </tr>
-  <tr>
-    <td>🎯 Soluções</td>
-    <td>Propor ações específicas</td>
-    <td>Relatório Executivo</td>
-  </tr>
+<table>
+  <thead>
+    <tr>
+      <th>Fase</th>
+      <th>Objetivo</th>
+      <th>Consultas SQL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Diagnóstico</strong></td>
+      <td>Entender a magnitude do problema</td>
+      <td>6 consultas</td>
+    </tr>
+    <tr>
+      <td><strong>Análise</strong></td>
+      <td>Identificar padrões e correlações</td>
+      <td>9 consultas</td>
+    </tr>
+    <tr>
+      <td><strong>Soluções</strong></td>
+      <td>Propor ações específicas</td>
+      <td>Relatório executivo</td>
+    </tr>
+  </tbody>
 </table>
 
-📈 PRINCIPAIS DESCOBERTAS  
-1️⃣ 🚨 PROBLEMA DE CHURN CRÍTICO  
-sql  
--- INVESTIGAÇÃO 1: Taxa de Recorrência  
-Única Compra:   92.507 clientes (96,95%)  
-Recorrente:      2.913 clientes (3,05%)  -- PROBLEMA GRAVE!  
+<hr>
 
-2️⃣ 💡 CLIENTES "ALTO VALOR" PERDIDOS  
-sql  
--- INVESTIGAÇÃO 2: Segmentação Avançada  
-Alto Valor + Única Compra: 1.244 clientes  -- OPORTUNIDADE PERDIDA!  
-Alto Valor + Frequente:       12 clientes  -- RAROS CAMPEÕES!  
+<h2>Principais Descobertas</h2>
 
-3️⃣ 🗺️ DISPARIDADE REGIONAL DRAMÁTICA  
-sql  
--- INVESTIGAÇÃO 3: Performance por Estado  
-SP: TME 8,18 dias | Taxa Atraso: 4,28%  -- EXCELENTE!  
-RJ: TME 14,68 dias | Taxa Atraso: 11,25% -- PROBLEMÁTICO!  
-RS: TME 14,51 dias | Taxa Atraso: 5,64%  -- LENTO MAS CONFIÁVEL  
+<h3>1. Problema de Churn Crítico</h3>
+<p>Dos 95.420 clientes únicos analisados:</p>
+<ul>
+  <li><strong>Única Compra:</strong> 92.507 clientes (96,95%)</li>
+  <li><strong>Recorrentes:</strong> 2.913 clientes (3,05%)</li>
+</ul>
 
-🔍 CAUSAS RAIZ IDENTIFICADAS  
-🎯 CORRELAÇÃO: EXPERIÊNCIA vs RETORNO  
-html  
-<div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin: 10px 0;">
-<h4>📊 INVESTIGAÇÃO 6: Impacto da Primeira Experiência</h4>
-<table border="1" style="width:100%">
-  <tr style="background: #2196F3; color: white;">
-    <th>Experiência</th>
-    <th>Taxa Retorno</th>
-    <th>Impacto</th>
-  </tr>
-  <tr>
-    <td>TME Médio + Frete Baixo</td>
-    <td>3,96%</td>
-    <td>✅ Melhor</td>
-  </tr>
-  <tr>
-    <td>TME Lento + Frete Alto</td>
-    <td>2,86%</td>
-    <td>❌ Pior (-28%)</td>
-  </tr>
+<h3>2. Clientes de Alto Valor Perdidos</h3>
+<ul>
+  <li><strong>Alto Valor + Única Compra:</strong> 1.244 clientes — oportunidade desperdiçada.</li>
+  <li><strong>Alto Valor + Frequente:</strong> apenas 12 clientes — os “Campeões”.</li>
+</ul>
+
+<h3>3. Disparidade Regional</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Estado</th>
+      <th>TME (dias)</th>
+      <th>Taxa de Atraso</th>
+      <th>Observação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SP</td>
+      <td>8,18</td>
+      <td>4,28%</td>
+      <td>Excelente performance</td>
+    </tr>
+    <tr>
+      <td>RJ</td>
+      <td>14,68</td>
+      <td>11,25%</td>
+      <td>Região problemática</td>
+    </tr>
+    <tr>
+      <td>RS</td>
+      <td>14,51</td>
+      <td>5,64%</td>
+      <td>Lento, mas estável</td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-🚨 PRODUTOS "MATADORES" DE CLIENTES  
-sql  
--- INVESTIGAÇÃO 7: Categorias com Zero Retenção  
-cine_foto:                   0% retenção | 65 clientes perdidos  
-construcao_ferramentas:      0% retenção | 97 clientes perdidos  
-fashion_underwear:           0% retenção | 121 clientes perdidos  
-artes:                       0% retenção | 202 clientes perdidos  
+<hr>
 
-🏆 FÓRMULA DOS CLIENTES "CAMPEÕES"  
-sql  
--- INVESTIGAÇÃO 9: Perfil dos Clientes Fiéis  
-TME Médio + Frete Médio:   88 campeões | GMV: R$ 817  -- MAIOR VALOR  
-TME Rápido + Frete Baixo:  64 campeões | GMV: R$ 717  
-ZERO ATRASOS na 1ª compra: Fator crítico de sucesso  
+<h2>Correlação: Experiência vs Retenção</h2>
+<p>O tempo médio de entrega (TME) e o valor do frete na primeira compra têm impacto direto na recompra.</p>
 
-🛠️ RECOMENDAÇÕES ESTRATÉGICAS  
-🎯 AÇÕES IMEDIATAS (0-3 MESES)  
-html  
-<div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin: 10px 0;">
-<h4>🚀 PRIORIDADES CRÍTICAS</h4>
-<ol>
-  <li><strong>Revisar 6 categorias problemáticas</strong> - Análise de viabilidade</li>
-  <li><strong>Implementar "Padrão Ouro" para primeira compra</strong>:
+<table>
+  <thead>
+    <tr>
+      <th>Experiência</th>
+      <th>Taxa de Retorno</th>
+      <th>Impacto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TME Médio + Frete Baixo</td>
+      <td>3,96%</td>
+      <td>✅ Melhor cenário</td>
+    </tr>
+    <tr>
+      <td>TME Lento + Frete Alto</td>
+      <td>2,86%</td>
+      <td>❌ Pior cenário (-28%)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Produtos com Zero Retenção</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Categoria</th>
+      <th>Taxa de Retenção</th>
+      <th>Clientes Perdidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>cine_foto</td><td>0%</td><td>65</td></tr>
+    <tr><td>construcao_ferramentas</td><td>0%</td><td>97</td></tr>
+    <tr><td>fashion_underwear</td><td>0%</td><td>121</td></tr>
+    <tr><td>artes</td><td>0%</td><td>202</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Perfil dos Clientes Fiéis</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Experiência</th>
+      <th>Clientes</th>
+      <th>GMV</th>
+      <th>Insight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>TME Médio + Frete Médio</td><td>88</td><td>R$ 817</td><td>Maior valor</td></tr>
+    <tr><td>TME Rápido + Frete Baixo</td><td>64</td><td>R$ 717</td><td>Bom retorno</td></tr>
+    <tr><td>Zero atrasos na 1ª compra</td><td colspan="3"><strong>Fator crítico de sucesso</strong></td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Recomendações Estratégicas</h2>
+
+<h3>Ações Imediatas (0–3 meses)</h3>
+<ul>
+  <li>Revisar 6 categorias com alta taxa de perda.</li>
+  <li>Implementar o “Padrão Ouro” para a primeira compra:
     <ul>
       <li>TME ≤ 14 dias</li>
       <li>Frete ≤ R$ 30</li>
       <li>Zero atrasos garantidos</li>
     </ul>
   </li>
-  <li><strong>Otimizar operações no RJ</strong> - Reduzir TME de 21 para 14 dias</li>
-</ol>
-</div>
-
-📈 ESTRATÉGIAS DE LONGO PRAZO (3-12 MESES)  
-html  
-<div style="background: #d4edda; padding: 15px; border-radius: 10px; margin: 10px 0;">
-<h4>📊 PLANO DE RETENÇÃO</h4>
-<ul>
-  <li><strong>Programa de Fidelidade Pós-Primeira-Compra</strong></li>
-  <li><strong>Gestão Ativa de Categorias de Risco</strong></li>
-  <li><strong>Padrões Regionais de Qualidade</strong> baseados em métricas</li>
-  <li><strong>Sistema de Alertas para Experiências Ruins</strong></li>
+  <li>Reduzir o TME no RJ de 21 para 14 dias.</li>
 </ul>
-</div>
 
-📊 IMPACTO ESPERADO  
-🎯 METAS QUANTIFICÁVEIS  
-html  
-<table border="1" style="width:100%">
-  <tr style="background: #4CAF50; color: white;">
-    <th>Métrica</th>
-    <th>Atual</th>
-    <th>Meta (6 meses)</th>
-    <th>Impacto</th>
-  </tr>
-  <tr>
-    <td>Taxa de Retenção</td>
-    <td>3,05%</td>
-    <td>4,00%</td>
-    <td>+31%</td>
-  </tr>
-  <tr>
-    <td>Clientes Recorrentes</td>
-    <td>2.913</td>
-    <td>3.800</td>
-    <td>+887 clientes</td>
-  </tr>
-  <tr>
-    <td>GMV de Clientes Fiéis</td>
-    <td>R$ 2,3M</td>
-    <td>R$ 3,0M</td>
-    <td>+R$ 700K</td>
-  </tr>
+<h3>Estratégias de Longo Prazo (3–12 meses)</h3>
+<ul>
+  <li>Programa de fidelidade pós-primeira-compra.</li>
+  <li>Gestão ativa de categorias de risco.</li>
+  <li>Padrões regionais de qualidade.</li>
+  <li>Alertas automáticos para experiências negativas.</li>
+</ul>
+
+<hr>
+
+<h2>Impacto Esperado</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Métrica</th>
+      <th>Atual</th>
+      <th>Meta (6 meses)</th>
+      <th>Impacto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Taxa de Retenção</td><td>3,05%</td><td>4,00%</td><td>+31%</td></tr>
+    <tr><td>Clientes Recorrentes</td><td>2.913</td><td>3.800</td><td>+887</td></tr>
+    <tr><td>GMV de Clientes Fiéis</td><td>R$ 2,3M</td><td>R$ 3,0M</td><td>+R$ 700K</td></tr>
+  </tbody>
 </table>
 
-🔗 CONSULTAS SQL UTILIZADAS  
-📁 ESTRUTURA DO PROJETO  
-html  
-<div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
-<pre>
-olist_analysis/
-├── 📊 dashboard_comercial/
-├── 📈 dashboard_marketing/
-├── 🚚 dashboard_operacional/
-├── 🔍 investigacoes_sql/
-│   ├── 1001_analise_churn.sql
-│   ├── 1002_segmentacao_avancada.sql
-│   ├── 1003_performance_regional.sql
-│   ├── 1004_clientes_alto_valor.sql
-│   ├── 1005_sazonalidade_compras.sql
-│   ├── 1006_experiencia_retorno.sql
-│   ├── 1007_produtos_matadores.sql
-│   ├── 1008_analise_categorias_problematicas.sql
-│   └── 1009_clientes_campeoes.sql
-└── 📋 relatorio_executivo.md
-</pre>
-</div>
+<hr>
 
-💾 CÓDIGOS PRINCIPAIS  
-<details> <summary>🔍 Consulta 1001 - Análise de Churn</summary>
-sql
-WITH clientes_recorrencia AS (
-  SELECT 
-    customer_unique_id,
-    COUNT(DISTINCT order_id) as total_pedidos,
-    MIN(data_compra) as primeira_compra,
-    MAX(data_compra) as ultima_compra,
-    CASE 
-      WHEN COUNT(DISTINCT order_id) > 1 THEN 'Recorrente'
-      ELSE 'Única Compra'
-    END as tipo_cliente
-  FROM `olist-sandbox-portfolio.olist_analysis.fato_pedido`
-  GROUP BY customer_unique_id
-)
-SELECT 
-  tipo_cliente,
-  COUNT(*) as total_clientes,
-  ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(), 2) as percentual
-FROM clientes_recorrencia
-GROUP BY tipo_cliente;
-</details>
-
-<details> <summary>📈 Consulta 1006 - Experiência vs Retorno</summary>
-sql
-WITH experiencia_primeira_compra AS (
-  SELECT 
-    fp.customer_unique_id,
-    AVG(fp.tempo_aprovacao_entrega_dias) as TME_primeira_compra,
-    AVG(fp.indicador_atraso) as atraso_primeira_compra,
-    AVG(fp.valor_frete) as frete_primeira_compra,
-    COUNT(DISTINCT fp.order_id) as total_pedidos,
-    CASE WHEN COUNT(DISTINCT fp.order_id) > 1 THEN 1 ELSE 0 END as retornou
-  FROM `olist-sandbox-portfolio.olist_analysis.fato_pedido` fp
-  GROUP BY fp.customer_unique_id
-)
-SELECT 
-  CASE 
-    WHEN TME_primeira_compra <= 7 THEN 'TME Rápido (≤7 dias)'
-    WHEN TME_primeira_compra <= 14 THEN 'TME Médio (8-14 dias)'
-    ELSE 'TME Lento (>14 dias)'
-  END as grupo_tme,
-  CASE 
-    WHEN frete_primeira_compra <= 15 THEN 'Frete Baixo (≤R$15)'
-    WHEN frete_primeira_compra <= 30 THEN 'Frete Médio (R$16-30)'
-    ELSE 'Frete Alto (>R$30)'
-  END as grupo_frete,
-  COUNT(*) as total_clientes,
-  AVG(retornou)*100 as taxa_retorno_percent
-FROM experiencia_primeira_compra
-GROUP BY grupo_tme, grupo_frete
-ORDER BY taxa_retorno_percent DESC;
-</details>
-
-👥 RESPONSABILIDADES E PRÓXIMOS PASSOS  
-🎯 OWNERSHIP  
-html  
-<table border="1" style="width:100%">
-  <tr style="background: #FFC107; color: black;">
-    <th>Área</th>
-    <th>Responsável</th>
-    <th>Prazo</th>
-  </tr>
-  <tr>
-    <td>Operações</td>
-    <td>Head de Operações</td>
-    <td>30 dias</td>
-  </tr>
-  <tr>
-    <td>Marketing</td>
-    <td>Head de Marketing</td>
-    <td>60 dias</td>
-  </tr>
-  <tr>
-    <td>Comercial</td>
-    <td>Head Comercial</td>
-    <td>45 dias</td>
-  </tr>
+<h2>Próximos Passos e Responsabilidades</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Área</th>
+      <th>Responsável</th>
+      <th>Prazo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Operações</td><td>Head de Operações</td><td>30 dias</td></tr>
+    <tr><td>Marketing</td><td>Head de Marketing</td><td>60 dias</td></tr>
+    <tr><td>Comercial</td><td>Head Comercial</td><td>45 dias</td></tr>
+  </tbody>
 </table>
 
-📅 PRÓXIMOS PASSOS  
-Apresentação para stakeholders - Semana 1  
-Implementação do "Padrão Ouro" - Semanas 2-4  
-Revisão das categorias problemáticas - Semanas 3-6  
-Monitoramento contínuo - A partir da semana 7  
+<ul>
+  <li><strong>Semana 1:</strong> Apresentação para stakeholders</li>
+  <li><strong>Semanas 2–4:</strong> Implementação do Padrão Ouro</li>
+  <li><strong>Semanas 3–6:</strong> Revisão das categorias críticas</li>
+  <li><strong>A partir da Semana 7:</strong> Monitoramento contínuo</li>
+</ul>
 
-<div align="center">
-🏆 CONCLUSÃO  
-"Garantir uma experiência consistente na primeira compra é a chave para transformar clientes únicos em fiéis"
+<hr>
 
-📊 Relatório gerado em: Novembro 2025  
-🔍 Base de dados: 99.441 pedidos | 95.420 clientes únicos
-</div>
+<h2>Conclusão</h2>
+<blockquote>“Garantir uma experiência consistente na primeira compra é a chave para transformar clientes únicos em fiéis.”</blockquote>
 
-<div>
-https://img.shields.io/badge/REPOSIT%C3%93RIO-GITHUB-black?style=for-the-badge&logo=github  
-https://img.shields.io/badge/AN%C3%81LISE-BIGQUERY-orange?style=for-the-badge&logo=google  
-https://img.shields.io/badge/VIZ-LOOKER_STUDIO-blue?style=for-the-badge&logo=google  
-</div>
+<p><strong>Base de dados analisada:</strong> 99.441 pedidos | 95.420 clientes únicos</p>
+<p><strong>Período da análise:</strong> Novembro de 2025</p>
+
+<hr>
+
+<p><a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset" target="_blank" rel="noopener noreferrer">📎 Repositório do Projeto</a></p>
 
