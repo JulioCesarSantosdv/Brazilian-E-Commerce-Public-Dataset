@@ -1,5 +1,5 @@
 📊 RELATÓRIO EXECUTIVO - INVESTIGAÇÃO OLIST: ANÁLISE DE CHURN E RETENÇÃO
-<div align="center">
+<div>
 https://img.shields.io/badge/AN%C3%81LISE-DASHBOARDS-blue
 https://img.shields.io/badge/BIGQUERY-SQL-yellow
 https://img.shields.io/badge/INSIGHTS-ACION%C3%81VEIS-green
@@ -278,8 +278,9 @@ Monitoramento contínuo - A partir da semana 7
 🔍 Base de dados: 99.441 pedidos | 95.420 clientes únicos
 </div>
 
-<div align="center">
+<div>
 https://img.shields.io/badge/REPOSIT%C3%93RIO-GITHUB-black?style=for-the-badge&logo=github  
 https://img.shields.io/badge/AN%C3%81LISE-BIGQUERY-orange?style=for-the-badge&logo=google  
 https://img.shields.io/badge/VIZ-LOOKER_STUDIO-blue?style=for-the-badge&logo=google  
 </div>
+
