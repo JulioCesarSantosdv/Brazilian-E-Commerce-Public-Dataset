@@ -29,19 +29,25 @@ Esta investigação teve como objetivo descobrir as <strong>causas raiz da baixa
 <h2>Principais Descobertas</h2>
 
 <h3>1. Problema de Churn Crítico Confirmado</h3>
-<pre><code>-- Resultado da Investigação 1
+<pre><code>-- Resultado da Investigação 1 
+-- Análise detalhada do comportamento de clientes únicos vs recorrentes
+  
 Única Compra:   92.507 clientes (96,95%)
 Recorrente:      2.913 clientes (3,05%)
 </code></pre>
 
 <h3>2. Clientes de Alto Valor Não Retornam</h3>
 <pre><code>-- Resultado da Investigação 2
+-- Análise de Valor do Cliente + Comportamento de Compra
+  
 Alto Valor + Única Compra: 1.244 clientes
 Alto Valor + Frequente:       12 clientes
 </code></pre>
 
 <h3>3. Disparidade Regional Significativa</h3>
 <pre><code>-- Resultado da Investigação 3
+-- Análise geográfica detalhada de performance
+  
 SP: TME 8,18 dias | Taxa Atraso: 4,28%
 RJ: TME 14,68 dias | Taxa Atraso: 11,25%
 RS: TME 14,51 dias | Taxa Atraso: 5,64%
@@ -53,12 +59,14 @@ RS: TME 14,51 dias | Taxa Atraso: 5,64%
 
 <h3>Correlação entre Experiência e Retorno</h3>
 <pre><code>-- Investigação 6: Impacto da Primeira Experiência
+-- A experiência da primeira compra impacta a decisão de retornar?
 TME Médio + Frete Baixo:    3,96% retorno
 TME Lento + Frete Alto:     2,86% retorno (-28%)
 </code></pre>
 
 <h3>Produtos com Zero Retenção</h3>
 <pre><code>-- Investigação 7: Categorias Problemáticas
+  -- Quais categorias têm pior retenção após primeira compra?
 cine_foto:                   0% retenção | 65 clientes
 construcao_ferramentas:      0% retenção | 97 clientes
 fashion_underwear:           0% retenção | 121 clientes
@@ -67,6 +75,7 @@ artes:                       0% retenção | 202 clientes
 
 <h3>Fórmula dos Clientes Campeões</h3>
 <pre><code>-- Investigação 9: Perfil dos Clientes Fiéis
+  -- Análise dos clientes que começaram bem e viraram recorrentes
 TME Médio + Frete Médio:   88 campeões | GMV: R$ 817
 ZERO ATRASOS na 1ª compra: Fator crítico
 </code></pre>
@@ -494,4 +503,5 @@ A implementação do <strong>"Padrão Ouro" operacional</strong> pode aumentar s
 <p>
 <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/README.md#passo-5-hipóteses-analíticas" target="_blank" rel="noopener noreferrer">Voltar</a>
 </p>
+
 
