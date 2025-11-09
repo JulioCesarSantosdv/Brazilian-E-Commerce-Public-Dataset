@@ -241,7 +241,7 @@ A partir da <strong>FATO_PEDIDO</strong>, as análises para as três áreas são
   <li>Evolução mensal: GMV mês a mês</li>
   <li>Receita por Categoria</li>
 </ul>
-<p><a href="https://lookerstudio.google.com/u/0/reporting/comercial-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Comercial no Looker Studio</a></p>
+<p><a href="https://lookerstudio.google.com/reporting/c45588de-9a47-4d9a-b24b-eb40422bf5f1" target="_blank" rel="noopener noreferrer">Dashboard Comercial no Looker Studio</a></p>
 
 <h3>Marketing/Clientes</h3>
 <ul>
