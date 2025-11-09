@@ -1,4 +1,4 @@
-<h1>Relatório de Investigação SQL — Análise de Churn e Retenção Olist</h1>
+<h1>Análise Exploratória dos Dados</h1>
 
 <h2>Contexto e Objetivo da Investigação</h2>
 <p>
@@ -503,5 +503,6 @@ A implementação do <strong>"Padrão Ouro" operacional</strong> pode aumentar s
 <p>
 <a href="https://github.com/JulioCesarSantosdv/Brazilian-E-Commerce-Public-Dataset/blob/main/README.md#passo-5-hipóteses-analíticas" target="_blank" rel="noopener noreferrer">Voltar</a>
 </p>
+
 
 
