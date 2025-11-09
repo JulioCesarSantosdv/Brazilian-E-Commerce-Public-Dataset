@@ -1,6 +1,6 @@
-# DOCUMENTAÇÃO COMPLETA - PROJETO OLIST
+# VIEWS DASHBOARDS
 
-Aqui está a documentação técnica completa de todas as views SQL do projeto, seguindo a estrutura solicitada:
+Consultas para dashboards
 
 ---
 
@@ -10,7 +10,6 @@ Aqui está a documentação técnica completa de todas as views SQL do projeto, 
 View principal para o Dashboard Comercial, agregando métricas de vendas, cancelamentos e inadimplência por múltiplas dimensões temporais e geográficas.
 
 ### Análise Técnica
-*   **Complexidade:** Média - Agregações múltiplas com cálculos condicionais.
 *   **Tabelas Envolvidas:** `fato_pedido` (fp).
 *   **Joins Utilizados:** Nenhum (consulta direta da fato).
 *   **Agregações:** `COUNT(DISTINCT)`, `SUM`, `CASE` condicional.
@@ -73,7 +72,6 @@ GROUP BY
 View para análise de marketing com segmentação RFM, LTV e comportamento de clientes, utilizando Common Table Expressions (CTEs) para agregação hierárquica.
 
 ### Análise Técnica
-*   **Complexidade:** Alta - Múltiplos CTEs e funções de janela.
 *   **Tabelas Envolvidas:** `fato_pedido`.
 *   **Joins Utilizados:** `LEFT JOIN` entre CTEs.
 *   **Agregações:** `COUNT(DISTINCT)`, `SUM`, `AVG`, `MIN`, `MAX`.
@@ -159,7 +157,6 @@ LEFT JOIN primeira_compra_cat p
 View para análise operacional com KPIs de tempo de entrega, preparação, atrasos e performance logística.
 
 ### Análise Técnica
-*   **Complexidade:** Baixa - Consulta direta com transformações simples.
 *   **Tabelas Envolvidas:** `fato_pedido` (fp).
 *   **Joins Utilizados:** Nenhum.
 *   **Agregações:** Nenhuma (dados no nível do pedido).
@@ -236,7 +233,6 @@ WHERE fp.data_entrega_cliente IS NOT NULL
 View consolidada para análise temporal com métricas mensais de todas as áreas (comercial, marketing, operacional) e variação de GMV.
 
 ### Análise Técnica
-*   **Complexidade:** Alta - CTE com múltiplas agregações e funções de janela.
 *   **Tabelas Envolvidas:** `fato_pedido` (fp).
 *   **Joins Utilizados:** Nenhum.
 *   **Agregações:** `SUM`, `COUNT(DISTINCT)`, `AVG`, `CASE` condicional.
@@ -341,7 +337,6 @@ ORDER BY mes;
 View base para análise dimensional de categorias de produtos, com rankings e indicadores de relevância.
 
 ### Análise Técnica
-*   **Complexidade:** Média - Agregações com funções de janela para ranking.
 *   **Tabelas Envolvidas:** `fato_pedido` (fp).
 *   **Joins Utilizados:** Nenhum.
 *   **Agregações:** `COUNT(DISTINCT)`, `SUM`, `AVG`, `RANK()`.
@@ -400,7 +395,6 @@ ORDER BY gmv_total DESC;
 View base para análise dimensional de vendedores, seguindo a mesma estrutura da view de categorias para consistência.
 
 ### Análise Técnica
-*   **Complexidade:** Média - Join simples com agregações e rankings.
 *   **Tabelas Envolvidas:** `fato_pedido` (fp), `sellers` (s).
 *   **Joins Utilizados:** `INNER JOIN` com `sellers`.
 *   **Agregações:** `COUNT(DISTINCT)`, `SUM`, `AVG`, `RANK()`.
@@ -454,7 +448,6 @@ GROUP BY 1, 2, 3;
 View simplificada para filtros, contendo apenas as top 10 categorias por GMV.
 
 ### Análise Técnica
-*   **Complexidade:** Baixa - Consulta simples sobre view base.
 *   **Tabelas Envolvidas:** `vw_base_categorias`.
 *   **Joins Utilizados:** Nenhum.
 *   **Agregações:** Nenhuma.
@@ -490,7 +483,6 @@ ORDER BY ranking_gmv;
 View para alertas operacionais - identifica as 5 cidades com maior taxa de atraso na entrega.
 
 ### Análise Técnica
-*   **Complexidade:** Baixa - Agregações simples com filtro `HAVING`.
 *   **Tabelas Envolvidas:** `vw_dashboard_operacional`.
 *   **Joins Utilizados:** Nenhum.
 *   **Agregações:** `COUNT`, `CASE` condicional.
@@ -531,7 +523,6 @@ LIMIT 5;
 View para alertas operacionais - identifica vendedores com pior tempo médio de entrega (TME).
 
 ### Análise Técnica
-*   **Complexidade:** Baixa - Agregação simples com `LIMIT`.
 *   **Tabelas Envolvidas:** `vw_dashboard_operacional`.
 *   **Joins Utilizados:** Nenhum.
 *   **Agregações:** `COUNT`, `AVG`.
@@ -564,13 +555,12 @@ LIMIT 6;
 
 ---
 
-## 10. View: vw_frete_vs_peso (D009)
+## 10. View: vw_frete_vs_peso 
 
 ### Descrição da Funcionalidade
 View para análise de correlação entre o custo do frete e o peso do produto, agrupando os produtos em faixas de peso.
 
 ### Análise Técnica
-*   **Complexidade:** Média - Join entre `order_items` e `products` com agregações e `CASE` para faixas.
 *   **Tabelas Envolvidas:** `order_items` (oi), `products` (p).
 *   **Joins Utilizados:** `JOIN` entre `order_items` e `products`.
 *   **Agregações:** `COUNT`, `AVG`, `CASE` para faixas.
@@ -621,19 +611,4 @@ ORDER BY
   END;
 ```
 
----
 
-## RESUMO DA ARQUITETURA
-
-### Views por Categoria:
-*   **Dashboard Views (3):** Comercial, Marketing, Operacional
-*   **Base Views (2):** Categorias, Vendedores
-*   **Temporal Views (1):** Análise mensal unificada
-*   **Top N Views (3):** Alertas e filtros
-*   **Correlação Views (1):** Análise frete vs peso
-
-### Padrões Técnicos Implementados:
-1.  **Nomenclatura consistente:** `vw_[tipo][objeto][métrica]`
-2.  **Agregações otimizadas:** Evitar duplicação de cálculos
-3.  **Tratamento de outliers:** Filtros proativos em views de análise
-4.  **Documentação embutida:** Comentários explicativos no código
