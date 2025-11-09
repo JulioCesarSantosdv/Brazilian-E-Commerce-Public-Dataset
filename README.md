@@ -250,7 +250,7 @@ A partir da <strong>FATO_PEDIDO</strong>, as análises para as três áreas são
   <li>Categoria de Primeira Compra</li>
   <li>Taxa de Avaliações Negativas</li>
 </ul>
-<p><a href="https://lookerstudio.google.com/u/0/reporting/marketing-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Marketing no Looker Studio</a></p>
+<p><a href="https://lookerstudio.google.com/reporting/c45588de-9a47-4d9a-b24b-eb40422bf5f1" target="_blank" rel="noopener noreferrer">Dashboard Marketing no Looker Studio</a></p>
 
 <h3>Operacional</h3>
 <ul>
@@ -259,7 +259,7 @@ A partir da <strong>FATO_PEDIDO</strong>, as análises para as três áreas são
   <li>Custo do Frete por Dimensão</li>
   <li>Frete vs. Peso/Comprimento</li>
 </ul>
-<p><a href="https://lookerstudio.google.com/u/0/reporting/operacoes-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Operacional no Looker Studio</a></p>
+<p><a href="https://lookerstudio.google.com/reporting/c45588de-9a47-4d9a-b24b-eb40422bf5f1" target="_blank" rel="noopener noreferrer">Dashboard Operacional no Looker Studio</a></p>
 <hr>
 
 <h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
