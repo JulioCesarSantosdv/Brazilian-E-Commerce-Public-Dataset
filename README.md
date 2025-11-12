@@ -124,45 +124,161 @@ TOP CIDADES COM ATRASO CRÍTICO:</p>
 <hr>
 
 <h2>Implementação Técnica</h2>
-
 <h3>Schema Estrela (BigQuery)</h3>
 
-<pre><code>-- QUERY REAL DO DASHBOARD COMERCIAL
+<p><strong> Observação:</strong> O faturamento total (GMV = R$ 16,57M) é calculado diretamente a partir da soma de <code>price + freight_value</code> na tabela <code>fato_pedido</code>. Essa tabela representa o núcleo do <em>star schema</em>, centralizando as métricas de negócio e conectando-se às dimensões (clientes, produtos, vendedores, tempo, etc.).</p>
+
+<pre><code>-- TABELA FATO PRINCIPAL (FATO_PEDIDO)
+-- Modelo de dados central do schema estrela
+
+CREATE OR REPLACE TABLE `olist-sandbox-portfolio.olist_analysis.fato_pedido` AS
 SELECT 
-  COUNT(DISTINCT order_id) as total_pedidos,
-  SUM(price + freight_value) as gmv_total,
-  ROUND(SUM(price + freight_value) / COUNT(DISTINCT order_id), 2) as ticket_medio
-FROM `olist.orders` o
-JOIN `olist.order_items` oi ON o.order_id = oi.order_id;
+    -- CHAVES PRIMÁRIAS E ESTRANGEIRAS
+    oi.order_id,
+    oi.order_item_id,
+    oi.product_id,
+    oi.seller_id,
+    o.customer_id,
+    c.customer_unique_id,
+    
+    -- MÉTRICAS FINANCEIRAS (COMERCIAL)
+    oi.price as valor_produto,
+    oi.freight_value as valor_frete,
+    (oi.price + oi.freight_value) as GMV,  -- Soma usada para calcular o faturamento total
+    op.payment_value as valor_pagamento,
+    op.payment_type as tipo_pagamento,
+    op.payment_installments as parcelas,
+    
+    -- DATAS PARA ANÁLISE TEMPORAL
+    DATE(o.order_purchase_timestamp) as data_compra,
+    DATE(o.order_approved_at) as data_aprovacao,
+    DATE(o.order_delivered_carrier_date) as data_envio_transportadora,
+    DATE(o.order_delivered_customer_date) as data_entrega_cliente,
+    DATE(o.order_estimated_delivery_date) as data_estimada_entrega,
+    
+    -- CÁLCULOS DE TEMPO (OPERACIONAL)
+    CASE 
+        WHEN o.order_delivered_customer_date IS NOT NULL 
+        AND o.order_purchase_timestamp IS NOT NULL
+        THEN DATE_DIFF(
+            DATE(o.order_delivered_customer_date), 
+            DATE(o.order_purchase_timestamp), 
+            DAY
+        )
+    END as tempo_entrega_total_dias,
+    
+    CASE 
+        WHEN o.order_delivered_customer_date IS NOT NULL 
+        AND o.order_approved_at IS NOT NULL
+        THEN DATE_DIFF(
+            DATE(o.order_delivered_customer_date), 
+            DATE(o.order_approved_at), 
+            DAY
+        )
+    END as tempo_aprovacao_entrega_dias,
+    
+    CASE 
+        WHEN o.order_delivered_carrier_date IS NOT NULL 
+        AND o.order_approved_at IS NOT NULL
+        THEN DATE_DIFF(
+            DATE(o.order_delivered_carrier_date), 
+            DATE(o.order_approved_at), 
+            DAY
+        )
+    END as tempo_preparacao_vendedor_dias,
+    
+    -- INDICADORES DE PERFORMANCE
+    CASE 
+        WHEN o.order_delivered_customer_date IS NOT NULL
+        AND o.order_estimated_delivery_date IS NOT NULL
+        AND DATE(o.order_delivered_customer_date) > DATE(o.order_estimated_delivery_date) 
+        THEN 1 ELSE 0 
+    END as indicador_atraso,
+    
+    CASE 
+        WHEN o.order_status IN ('canceled', 'unavailable') 
+        THEN 1 ELSE 0 
+    END as indicador_problema,
+    
+    -- DIMENSÕES DO PRODUTO
+    p.product_category_name,
+    p.product_weight_g,
+    p.product_length_cm,
+    p.product_height_cm,
+    p.product_width_cm,
+    
+    -- DIMENSÕES GEOGRÁFICAS
+    c.customer_city as cidade_cliente,
+    c.customer_state as estado_cliente,
+    s.seller_city as cidade_vendedor,
+    s.seller_state as estado_vendedor,
+    
+    -- DIMENSÕES DO PEDIDO E STATUS
+    o.order_status as status_pedido,
+    
+    -- DADOS PARA ANÁLISE DE MARKETING (AVALIAÇÕES)
+    r.string_field_1 as review_id,
+    r.string_field_2 as order_id_review,
+    r.string_field_3 as review_comment_title,
+    r.string_field_4 as review_comment_message,
+    CASE 
+        WHEN r.string_field_5 IS NOT NULL 
+        THEN DATE(PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', r.string_field_5))
+    END as data_avaliacao,
+    
+    CASE 
+        WHEN r.string_field_5 IS NOT NULL 
+        AND o.order_delivered_customer_date IS NOT NULL
+        THEN DATE_DIFF(
+            DATE(PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', r.string_field_5)), 
+            DATE(o.order_delivered_customer_date), 
+            DAY
+        )
+    END as tempo_entrega_avaliacao_dias
+
+FROM `olist-sandbox-portfolio.olist_analysis.order_items` oi
+JOIN `olist-sandbox-portfolio.olist_analysis.orders` o 
+    ON oi.order_id = o.order_id
+JOIN `olist-sandbox-portfolio.olist_analysis.customers` c 
+    ON o.customer_id = c.customer_id
+JOIN `olist-sandbox-portfolio.olist_analysis.products` p 
+    ON oi.product_id = p.product_id
+JOIN `olist-sandbox-portfolio.olist_analysis.sellers` s 
+    ON oi.seller_id = s.seller_id
+LEFT JOIN `olist-sandbox-portfolio.olist_analysis.order_payments` op 
+    ON oi.order_id = op.order_id
+LEFT JOIN `olist-sandbox-portfolio.olist_analysis.order_reviews` r 
+    ON oi.order_id = r.string_field_2;
 </code></pre>
 
-<h3>Análise RFM (SQL Avançado)</h3>
+<h3>Diagrama Lógico Simplificado (Star Schema)</h3>
 
-<pre><code>-- SEGMENTAÇÃO RFM QUE GEROU OS DADOS REAIS
-WITH rfm_calc AS (
-    SELECT 
-        customer_unique_id,
-        DATE_DIFF(CURRENT_DATE, MAX(order_purchase_timestamp), DAY) as recencia,
-        COUNT(DISTINCT order_id) as frequencia,
-        SUM(payment_value) as monetario
-    FROM fato_pedidos 
-    GROUP BY customer_unique_id
-)
-SELECT 
-    CASE
-        WHEN recencia < 100 AND frequencia > 3 AND monetario > 500 THEN 'Campeões'
-        WHEN recencia < 150 AND frequencia > 1 THEN 'Leais'
-        WHEN recencia < 30 THEN 'Novos'
-        WHEN recencia < 200 THEN 'Regulares'
-        ELSE 'Inativos'
-    END as segmento_rfm,
-    COUNT(*) as qtd_clientes,
-    ROUND(AVG(monetario), 2) as ltv_medio,
-    ROUND(AVG(recencia), 0) as recencia_media
-FROM rfm_calc
-GROUP BY segmento_rfm
-ORDER BY ltv_medio DESC;
-</code></pre>
+<pre>
+                      +-----------------------+
+                      |     dim_customers     |
+                      |  customer_id, city    |
+                      |  state, unique_id     |
+                      +-----------+-----------+
+                                  |
+                                  |
+                                  |
++---------------+     +-----------v-----------+     +------------------+
+| dim_products  | --> |     fato_pedido       | <-- |   dim_sellers     |
+| product_id    |     |  métricas e chaves    |     | seller_id, city   |
+| category_name |     |  GMV, tempo, status   |     | state             |
++---------------+     +-----------+-----------+     +------------------+
+                                  |
+                                  |
+                                  v
+                      +-----------------------+
+                      |      dim_time         |
+                      |  data_compra, data_   |
+                      |  entrega, aprovacão   |
+                      +-----------------------+
+</pre>
+
+<p>Esse diagrama ilustra a estrutura lógica em estrela, onde a tabela <code>fato_pedido</code> centraliza as métricas de negócio (GMV, atrasos, tempo de entrega) e se conecta às dimensões que oferecem contexto analítico (clientes, produtos, vendedores e tempo).</p>
+
 
 <h3>Resultados Quantificados</h3>
 <p><strong>Impacto Comercial</strong><br>
