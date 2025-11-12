@@ -48,6 +48,8 @@ Informática - R$ 1,07M</p>
 <li><strong>BA aparece</strong> com Lauro de Freitas (2º lugar - R$ 253,82K)</li>
 <li><strong>Oportunidade:</strong> Expansão para outras regiões</li>
 </ul>
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/619c11ff-cc02-488d-b60f-07bda8dfaa86" />
+
 
 <h3>Dashboard Marketing - <strong>LTV: R$ 173,40</strong></h3>
 <p><strong>Segmentação RFM Descoberta:</strong></p>
@@ -57,7 +59,7 @@ Informática - R$ 1,07M</p>
 <tr><th>Segmento</th><th>Clientes</th><th>LTV Médio</th><th>Recência</th></tr>
 </thead>
 <tbody>
-<tr><td>Campeões</td><td>150</td><td><strong>R$ 569</strong></td><td>84 dias</td></tr>
+<tr><td>Campeões</td><td>150</td><td><strong>R$ 569</strong></td><td>34 dias</td></tr>
 <tr><td>Leais</td><td>635</td><td>R$ 287,19</td><td>71 dias</td></tr>
 <tr><td>Novos</td><td>11.390</td><td>R$ 168,32</td><td>33 dias</td></tr>
 <tr><td>Regulares</td><td>25.528</td><td>R$ 175,12</td><td>123 dias</td></tr>
@@ -71,6 +73,7 @@ Informática - R$ 1,07M</p>
 <li><strong>57.767 clientes inativos</strong> (60% da base) - oportunidade de reativação</li>
 <li><strong>LTV dos Campeões é 3,3x maior</strong> que a média</li>
 </ul>
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/108e3c76-2fe5-44fe-9b10-021938ff5f02" />
 
 <h3>Dashboard Operacional - <strong>TME: 12 dias</strong></h3>
 <p><strong>Performance Logística:</strong></p>
@@ -97,6 +100,7 @@ TOP CIDADES COM ATRASO CRÍTICO:</p>
 <li><strong>Produtos 5-10kg</strong>: Frete ~R$ 15</li>
 <li><strong>Otimização:</strong> Revisão de política de fretes para categorias específicas</li>
 </ul>
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68acfa71-8082-4f44-9102-1497882f17c1" />
 
 <hr>
 
