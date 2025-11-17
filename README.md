@@ -8,7 +8,7 @@
 
 <hr>
 
-<h2>Executive Summary</h2>
+<h2>Sumário Executivo</h2>
 
 <table>
 <thead>
@@ -104,21 +104,18 @@ TOP CIDADES COM ATRASO CRÍTICO:</p>
 
 <hr>
 
-<h2>Insights Acionáveis & Recomendações</h2>
+<h2>Insights Acionáveis </h2>
 
 <h3>Área Comercial</h3>
 <p><strong>Insight:</strong> 5 categorias = 40% do faturamento (R$ 6,3M)<br>
-<strong>Recomendação:</strong> Campanhas cruzadas entre categorias top<br>
 <strong>Impacto:</strong> <strong>+8% GMV</strong> com melhor mix de produtos</p>
 
 <h3>Área Marketing</h3>
 <p><strong>Insight:</strong> Clientes "Campeões" têm LTV 3x maior (R$ 569 vs R$ 173)<br>
-<strong>Recomendação:</strong> Programa de fidelidade exclusivo para segmento RFM alto<br>
 <strong>Impacto:</strong> <strong>+20% retenção</strong> nos top 150 clientes</p>
 
 <h3>Área Operacional</h3>
 <p><strong>Insight:</strong> Cidade "Peary" tem 34,48% de atrasos (16,2% do total)<br>
-<strong>Recomendação:</strong> Parceria com transportadora local específica<br>
 <strong>Impacto:</strong> <strong>-50% atrasos</strong> em 2 meses</p>
 
 <hr>
@@ -250,35 +247,6 @@ LEFT JOIN `olist-sandbox-portfolio.olist_analysis.order_payments` op
 LEFT JOIN `olist-sandbox-portfolio.olist_analysis.order_reviews` r 
     ON oi.order_id = r.string_field_2;
 </code></pre>
-
-<h3>Diagrama Lógico Simplificado (Star Schema)</h3>
-
-<pre>
-                      +-----------------------+
-                      |     dim_customers     |
-                      |  customer_id, city    |
-                      |  state, unique_id     |
-                      +-----------+-----------+
-                                  |
-                                  |
-                                  |
-+---------------+     +-----------v-----------+     +------------------+
-| dim_products  | --> |     fato_pedido       | <-- |   dim_sellers     |
-| product_id    |     |  métricas e chaves    |     | seller_id, city   |
-| category_name |     |  GMV, tempo, status   |     | state             |
-+---------------+     +-----------+-----------+     +------------------+
-                                  |
-                                  |
-                                  v
-                      +-----------------------+
-                      |      dim_time         |
-                      |  data_compra, data_   |
-                      |  entrega, aprovacão   |
-                      +-----------------------+
-</pre>
-
-<p>Esse diagrama ilustra a estrutura lógica em estrela, onde a tabela <code>fato_pedido</code> centraliza as métricas de negócio (GMV, atrasos, tempo de entrega) e se conecta às dimensões que oferecem contexto analítico (clientes, produtos, vendedores e tempo).</p>
-
 
 <h3>Resultados Quantificados</h3>
 <p><strong>Impacto Comercial</strong><br>
