@@ -48,7 +48,10 @@ Informática - R$ 1,07M</p>
 <li><strong>BA aparece</strong> com Lauro de Freitas (2º lugar - R$ 253,82K)</li>
 <li><strong>Oportunidade:</strong> Expansão para outras regiões</li>
 </ul>
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/619c11ff-cc02-488d-b60f-07bda8dfaa86" />
+
+<p><strong><a href="https://lookerstudio.google.com/s/lxpI044Q658" target="_blank"> Acessar Dashboard Comercial Interativo</a></strong></p>
+
+<img width="1366" height="768" alt="Dashboard Comercial" src="https://github.com/user-attachments/assets/619c11ff-cc02-488d-b60f-07bda8dfaa86" />
 
 
 <h3>Dashboard Marketing - <strong>LTV: R$ 173,40</strong></h3>
@@ -73,7 +76,10 @@ Informática - R$ 1,07M</p>
 <li><strong>57.767 clientes inativos</strong> (60% da base) - oportunidade de reativação</li>
 <li><strong>LTV dos Campeões é 3,3x maior</strong> que a média</li>
 </ul>
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/108e3c76-2fe5-44fe-9b10-021938ff5f02" />
+
+<p><strong><a href="https://lookerstudio.google.com/s/iLeYyPKOu-o" target="_blank">Acessar Dashboard Marketing Interativo</a></strong></p>
+
+<img width="1366" height="768" alt="Dashboard Marketing" src="https://github.com/user-attachments/assets/108e3c76-2fe5-44fe-9b10-021938ff5f02" />
 
 <h3>Dashboard Operacional - <strong>TME: 12 dias</strong></h3>
 <p><strong>Performance Logística:</strong></p>
@@ -100,7 +106,10 @@ TOP CIDADES COM ATRASO CRÍTICO:</p>
 <li><strong>Produtos 5-10kg</strong>: Frete ~R$ 15</li>
 <li><strong>Otimização:</strong> Revisão de política de fretes para categorias específicas</li>
 </ul>
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68acfa71-8082-4f44-9102-1497882f17c1" />
+
+<p><strong><a href="https://lookerstudio.google.com/s/kLYF7J8SbaA" target="_blank">Acessar Dashboard Operacional Interativo</a></strong></p>
+
+<img width="1366" height="768" alt="Dashboard Operacional" src="https://github.com/user-attachments/assets/68acfa71-8082-4f44-9102-1497882f17c1" />
 
 <hr>
 
@@ -124,6 +133,8 @@ TOP CIDADES COM ATRASO CRÍTICO:</p>
 <h3>Schema Estrela (BigQuery)</h3>
 
 <p><strong> Observação:</strong> O faturamento total (GMV = R$ 16,57M) é calculado diretamente a partir da soma de <code>price + freight_value</code> na tabela <code>fato_pedido</code>. Essa tabela representa o núcleo do <em>star schema</em>, centralizando as métricas de negócio e conectando-se às dimensões (clientes, produtos, vendedores, tempo, etc.).</p>
+
+<p><strong><a href="https://github.com/juliocesarsantos/olist-analysis/blob/main/sql/fato_pedido.sql" target="_blank"> Ver Código Completo da Tabela Fato</a></strong></p>
 
 <pre><code>-- TABELA FATO PRINCIPAL (FATO_PEDIDO)
 -- Modelo de dados central do schema estrela
@@ -278,9 +289,10 @@ Expandir campanhas para categorias subexploradas<br>
 Automatizar alertas de performance para stakeholders</p>
 
 <h3>Sobre o Projeto</h3>
-<p><strong>Período:</strong> Novembro 2024<br>
 <strong>Dataset:</strong> Olist E-commerce (101.720 pedidos, 95.420 clientes)<br>
 <strong>Stack:</strong> BigQuery + SQL + Looker Studio<br>
 <strong>Objetivo:</strong> Demonstrar análise estratégica com impacto mensurável</p>
 
-<p><em>"Os dados mostram que focar nos 150 clientes 'Campeões' e otimizar as 5 cidades críticas pode gerar 80% do resultado com 20% do esforço."</em></p>
+<p><strong><a href="https://lookerstudio.google.com/reporting/c45588de-9a47-4d9a-b24b-eb40422bf5f1" target="_blank">Link Para o Dashboard Interativo</a></strong></p>
+
+<p><strong><a href="https://github.com/juliocesarsantos/olist-analysis/blob/main/docs/DOCUMENTA%C3%87%C3%83O%20COMPLETA%20-%20PROJETO%20OLIST.pdf" target="_blank"> Link para a Documentação Completa do Projeto</a></strong></p>
