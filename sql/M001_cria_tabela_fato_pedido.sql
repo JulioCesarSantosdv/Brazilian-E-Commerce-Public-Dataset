@@ -13,7 +13,7 @@ SELECT
     -- METRICAS FINANCEIRAS (COMERCIAL)
     oi.price as valor_produto,
     oi.freight_value as valor_frete,
-    (oi.price + oi.freight_value) as GMV,
+    (oi.price + oi.freight_value) as GMV,-- AQUI ESTÁ O CÁLCULO DO FATURAMENTO TOTAL
     op.payment_value as valor_pagamento,
     op.payment_type as tipo_pagamento,
     op.payment_installments as parcelas,
@@ -119,4 +119,5 @@ LEFT JOIN `olist-sandbox-portfolio.olist_analysis.order_payments` op
 LEFT JOIN `olist-sandbox-portfolio.olist_analysis.order_reviews` r 
     ON oi.order_id = r.string_field_2  -- CORREÇÃO CRÍTICA: string_field_2 é o order_id
 -- REMOVI O WHERE para incluir todos os status de pedido
+
 ;
